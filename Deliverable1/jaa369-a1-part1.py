@@ -43,7 +43,7 @@ def Led(x):
         else:
             GPIO.output(colors[rand], GPIO.LOW)
     else:
-        print("Button released")
+        print("Push me again to change color")
     
 
     
