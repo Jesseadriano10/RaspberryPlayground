@@ -49,14 +49,15 @@ def setup():
         GPIO.setup(pin, GPIO.OUT)
     
     GPIO.setup(SWITCH, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.add_event_detect(SWITCH, GPIO.BOTH, callback=button_pressed)
+    GPIO.add_event_detect(SWITCH, GPIO.FALLING, callback=button_pressed)
     
     print("Configuring ADC")
     ADC.setup(ADC_ADDRESS)
 
 def button_pressed(channel):
     global voice_enabled
-    voice_enabled = GPIO.input(SWITCH)
+    # Invert the current state of the voice_enabled variable
+    voice_enabled = not voice_enabled
 
 def update_leds(voice_val):
     global VOLUME_STATUS
@@ -75,23 +76,23 @@ def set_led_color(red, green, blue):
     GPIO.output(RGB_G, GPIO.LOW if green else GPIO.HIGH)
     GPIO.output(RGB_B, GPIO.LOW if blue else GPIO.HIGH)
 
-# def loop():
-#     global voice_enabled
-#     global payload
-#     voice_enabled = False
-#     while True:
-#         if voice_enabled:
-#             voice_val = ADC.read(0)
-#             print(f"Voice val is: {voice_val}")
-#             # Package the value of the sensor as a JSON object along with
-#             # volume status and timestamp
+def loop():
+    global voice_enabled
+    global payload
+    voice_enabled = False
+    while True:
+        if voice_enabled:
+            voice_val = ADC.read(0)
+            print(f"Voice val is: {voice_val}")
+            # Package the value of the sensor as a JSON object along with
+            # volume status and timestamp
 
-#             payload = json.dumps({"voice_val": voice_val,
-#                                     "volume_status": VOLUME_STATUS,
-#                                     "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
+            payload = json.dumps({"voice_val": voice_val,
+                                    "volume_status": VOLUME_STATUS,
+                                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
             
-#             update_leds(voice_val)
-#             publish(client)
+            update_leds(voice_val)
+            publish(client)
 
 def destroy():
     for pin in PINS[:-1]:
@@ -113,19 +114,7 @@ if __name__ == '__main__':
         time.sleep(1)
         if client.is_connected():
             print(f"Connected to {broker_name}")
-            while True:
-                if voice_enabled:
-                    voice_val = ADC.read(0)
-                    print(f"Voice val is: {voice_val}")
-                    # Package the value of the sensor as a JSON object along with
-                    # volume status and timestamp
-
-                    payload = json.dumps({"voice_val": voice_val,
-                                            "volume_status": VOLUME_STATUS,
-                                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
-                    
-                    update_leds(voice_val)
-                    publish(client)
+            loop()
         else:
             print(f"Connection to {broker_name} failed")
             client.loop_stop()
