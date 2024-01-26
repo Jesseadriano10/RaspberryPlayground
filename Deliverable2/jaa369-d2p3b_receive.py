@@ -14,7 +14,7 @@ Gpin = 18
 Bpin = 17 
 
 def setUp():
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     ADC.setup(0x48)
     GPIO.setwarnings(False)
 
