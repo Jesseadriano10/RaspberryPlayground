@@ -63,18 +63,25 @@ def update_leds(voice_val):
     global VOLUME_STATUS
     if voice_val < VOICE_THRESHOLD:
         VOLUME_STATUS = "Too Loud!"
-        set_led_color(False, False, True)  # Yellow
+        # Turn on Yellow LED
+        GPIO.output(RGB_R, GPIO.LOW)
+        GPIO.output(RGB_G, GPIO.LOW)
+        GPIO.output(RGB_B, GPIO.HIGH)
     elif VOICE_THRESHOLD <= voice_val < VOICE_MIDDLE:
         VOLUME_STATUS = "Just Right!"
-        set_led_color(False, True, False)  # Purple
+        # Turn Purple
+        GPIO.output(RGB_R, GPIO.LOW)
+        GPIO.output(RGB_G, GPIO.HIGH)
+        GPIO.output(RGB_B, GPIO.LOW)
+        
     else:
         VOLUME_STATUS = "Dead Quiet!"
-        set_led_color(True, False, False)  # Blue
+        # Turn Blue
+        GPIO.output(RGB_R, GPIO.HIGH)
+        GPIO.output(RGB_G, GPIO.LOW)
+        GPIO.output(RGB_B, GPIO.LOW)
+        
 
-def set_led_color(red, green, blue):
-    GPIO.output(RGB_R, GPIO.LOW if red else GPIO.HIGH)
-    GPIO.output(RGB_G, GPIO.LOW if green else GPIO.HIGH)
-    GPIO.output(RGB_B, GPIO.LOW if blue else GPIO.HIGH)
 
 def loop():
     global voice_enabled
