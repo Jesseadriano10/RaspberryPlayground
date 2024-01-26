@@ -20,7 +20,6 @@ def setUp():
 
     # Switch Trigger
     GPIO.setup(BtnPin, GPIO.IN)
-    GPIO.setup(Tmp_pin, GPIO.IN)
 
     # LED Trigger
     GPIO.setup(Rpin, GPIO.OUT)
