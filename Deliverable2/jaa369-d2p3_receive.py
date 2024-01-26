@@ -48,10 +48,10 @@ def on_message(client, userdata, msg):
     # Calculate the time it took to receive the message
     time_received = datetime.now()
     time_diff = time_received - datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
-    print(f"Received `{voice_val}` at {timestamp}. (Time taken: {time_diff.total_seconds()} seconds)")
+    print(f"Received `{voice_val}: {volume_status}` at {timestamp}. (Time taken: {time_diff.total_seconds()} seconds)")
     # Write the message and the timestamp to a file
     with open(f"jaa369-d2p3_recv-{broker}.txt", "a") as file:
-        file.write(f"Received `{voice_val}` at {timestamp}. (Time taken: {time_diff.total_seconds()} seconds)\n")
+        file.write(f"Received `{voice_val}: {volume_status}` at {timestamp}. (Time taken: {time_diff.total_seconds()} seconds)\n")
         
     if time_diff.total_seconds() > 30:
         client.disconnect()
