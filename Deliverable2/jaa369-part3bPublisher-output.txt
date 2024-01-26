@@ -1,0 +1,49 @@
+<----------------------------------------->
+Choose the following commands to execute:
+   1.) ledOn
+   2.) ledRed
+   3.) ledGreen
+   4.) ledBlue
+   5.) readSen
+   6.) quit
+
+Enter the command you want to execute: ledRed
+
+Executing Command:  ledRed
+
+<----------------------------------------->
+Choose the following commands to execute:
+   1.) ledOn
+   2.) ledRed
+   3.) ledGreen
+   4.) ledBlue
+   5.) readSen
+   6.) quit
+
+Enter the command you want to execute: readSen
+
+Executing Command:  readSen
+
+<----------------------------------------->
+Choose the following commands to execute:
+   1.) ledOn
+   2.) ledRed
+   3.) ledGreen
+   4.) ledBlue
+   5.) readSen
+   6.) quit
+
+Enter the command you want to execute: ledGreen
+
+Executing Command:  ledGreen
+
+<----------------------------------------->
+Choose the following commands to execute:
+   1.) ledOn
+   2.) ledRed
+   3.) ledGreen
+   4.) ledBlue
+   5.) readSen
+   6.) quit
+
+Enter the command you want to execute: quit
