@@ -1,0 +1,8 @@
+Average seconds: .4639 for file jaa369-d2p1_recv-broker.hivemq.com.txt
+Average seconds: .8814 for file jaa369-d2p1_recv-broker.emqx.io.txt
+Average seconds: .7457 for file jaa369-d2p1_recv-test.mosquitto.org.txt
+Average seconds: .6038 for file jaa369-d2p1_recv-mqtt.eclipseprojects.io.txt
+Average seconds: .6574 for file jaa369-d2p2_decrypted-broker.hivemq.com.txt
+Average seconds: .4666 for file jaa369-d2p2_decrypted-broker.emqx.io.txt
+Average seconds: .9248 for file jaa369-d2p2_decrypted-test.mosquitto.org.txt
+Average seconds: .7831 for file jaa369-d2p2_decrypted-mqtt.eclipseprojects.io.txt

@@ -1,0 +1,754 @@
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+  File "jaa369-d2p1_recv.py", line 43
+    print(f"Message: {message['message']}, 
+                                          ^
+SyntaxError: EOL while scanning string literal
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Traceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 81, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 77, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3039, in _packet_handle
+    return self._handle_connack()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3139, in _handle_connack
+    self, self._userdata, flags_dict, result)
+  File "jaa369-d2p1_recv.py", line 33, in on_connect
+    client.subscribe("jaa369_publish", qos = 0, optoins = None, properties = None)
+TypeError: subscribe() got an unexpected keyword argument 'optoins'
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Traceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 81, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 77, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3033, in _packet_handle
+    return self._handle_publish()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3327, in _handle_publish
+    self._handle_on_message(message)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3570, in _handle_on_message
+    on_message(self, self._userdata, message)
+TypeError: on_message() takes 1 positional argument but 3 were given
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Traceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 81, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 77, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3033, in _packet_handle
+    return self._handle_publish()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3327, in _handle_publish
+    self._handle_on_message(message)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3570, in _handle_on_message
+    on_message(self, self._userdata, message)
+  File "jaa369-d2p1_recv.py", line 43, in on_message
+    print(f"Message: {message['message']}, Timestamp: {message['timestamp']}, Time to receive: {time.time() - float(message['timestamp'])}")
+ValueError: could not convert string to float: '2024-01-25 19:56:07'
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Traceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 91, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 87, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3033, in _packet_handle
+    return self._handle_publish()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3327, in _handle_publish
+    self._handle_on_message(message)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3570, in _handle_on_message
+    on_message(self, self._userdata, message)
+  File "jaa369-d2p1_recv.py", line 48, in on_message
+    timestamp = datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+AttributeError: module 'datetime' has no attribute 'strptime'
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ^C
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Message: Hello, World! 0
+Timestamp: 2024-01-25 20:01:24
+Delta: 0:00:00.801888
+
+Traceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 91, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 87, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3033, in _packet_handle
+    return self._handle_publish()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3327, in _handle_publish
+    self._handle_on_message(message)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3570, in _handle_on_message
+    on_message(self, self._userdata, message)
+  File "jaa369-d2p1_recv.py", line 55, in on_message
+    json.dump({"message": message, "timestamp": timestamp, "delta": delta}, f, indent = 4)
+  File "/usr/lib/python3.7/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.7/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.7/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.7/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ^C
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 181` at 2024-01-25 20:04:25. (Time taken: 1.149458 seconds)
+Received `Hello, World! 182` at 2024-01-25 20:04:26. (Time taken: 1.119052 seconds)
+Received `Hello, World! 183` at 2024-01-25 20:04:27. (Time taken: 1.135572 seconds)
+Received `Hello, World! 184` at 2024-01-25 20:04:28. (Time taken: 1.122903 seconds)
+Received `Hello, World! 185` at 2024-01-25 20:04:29. (Time taken: 1.120672 seconds)
+Received `Hello, World! 186` at 2024-01-25 20:04:30. (Time taken: 1.147638 seconds)
+Received `Hello, World! 187` at 2024-01-25 20:04:31. (Time taken: 1.147524 seconds)
+Received `Hello, World! 188` at 2024-01-25 20:04:32. (Time taken: 1.125529 seconds)
+Received `Hello, World! 189` at 2024-01-25 20:04:33. (Time taken: 1.138039 seconds)
+Received `Hello, World! 190` at 2024-01-25 20:04:34. (Time taken: 1.131502 seconds)
+Received `Hello, World! 191` at 2024-01-25 20:04:35. (Time taken: 1.138044 seconds)
+Received `Hello, World! 192` at 2024-01-25 20:04:36. (Time taken: 1.136632 seconds)
+Received `Hello, World! 193` at 2024-01-25 20:04:37. (Time taken: 1.133669 seconds)
+Received `Hello, World! 194` at 2024-01-25 20:04:38. (Time taken: 1.157933 seconds)
+Received `Hello, World! 195` at 2024-01-25 20:04:39. (Time taken: 1.157331 seconds)
+Received `Hello, World! 196` at 2024-01-25 20:04:40. (Time taken: 1.153539 seconds)
+Received `Hello, World! 197` at 2024-01-25 20:04:41. (Time taken: 1.141156 seconds)
+Received `Hello, World! 198` at 2024-01-25 20:04:42. (Time taken: 1.1482 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 88, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 84, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:05:11. (Time taken: 0.16211 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:05:12. (Time taken: 0.168858 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:05:13. (Time taken: 0.168709 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:05:14. (Time taken: 0.166219 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:05:15. (Time taken: 0.177513 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:05:16. (Time taken: 0.175371 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:05:17. (Time taken: 0.187503 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:05:18. (Time taken: 0.174309 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:05:19. (Time taken: 0.180365 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:05:20. (Time taken: 0.28621 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:05:21. (Time taken: 0.183361 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:05:22. (Time taken: 0.196837 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:05:23. (Time taken: 0.183393 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:05:24. (Time taken: 0.192807 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:05:25. (Time taken: 0.192568 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:05:26. (Time taken: 0.204371 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:05:27. (Time taken: 0.208783 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:05:28. (Time taken: 0.98756 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:05:29. (Time taken: 0.222261 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:05:30. (Time taken: 0.194032 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:05:31. (Time taken: 0.202175 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:05:32. (Time taken: 0.200083 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:05:33. (Time taken: 0.203114 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:05:34. (Time taken: 0.210142 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:05:35. (Time taken: 0.206628 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:05:36. (Time taken: 0.208293 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:05:37. (Time taken: 0.223106 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:05:38. (Time taken: 0.223158 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:05:39. (Time taken: 0.211112 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:05:40. (Time taken: 0.231401 seconds)
+Received `Hello, World! 30` at 2024-01-25 20:05:41. (Time taken: 0.226103 seconds)
+Received `Hello, World! 31` at 2024-01-25 20:05:42. (Time taken: 0.217604 seconds)
+Received `Hello, World! 32` at 2024-01-25 20:05:43. (Time taken: 0.220864 seconds)
+Received `Hello, World! 33` at 2024-01-25 20:05:44. (Time taken: 0.259105 seconds)
+Received `Hello, World! 34` at 2024-01-25 20:05:45. (Time taken: 0.225532 seconds)
+Received `Hello, World! 35` at 2024-01-25 20:05:46. (Time taken: 0.223797 seconds)
+Received `Hello, World! 36` at 2024-01-25 20:05:47. (Time taken: 0.225939 seconds)
+Received `Hello, World! 37` at 2024-01-25 20:05:48. (Time taken: 0.230576 seconds)
+Received `Hello, World! 38` at 2024-01-25 20:05:49. (Time taken: 0.236935 seconds)
+Received `Hello, World! 39` at 2024-01-25 20:05:50. (Time taken: 0.233755 seconds)
+Received `Hello, World! 40` at 2024-01-25 20:05:51. (Time taken: 0.237167 seconds)
+Received `Hello, World! 41` at 2024-01-25 20:05:52. (Time taken: 0.245977 seconds)
+Received `Hello, World! 42` at 2024-01-25 20:05:53. (Time taken: 0.239134 seconds)
+Received `Hello, World! 43` at 2024-01-25 20:05:54. (Time taken: 0.253207 seconds)
+Received `Hello, World! 44` at 2024-01-25 20:05:55. (Time taken: 0.248097 seconds)
+Received `Hello, World! 45` at 2024-01-25 20:05:56. (Time taken: 0.248414 seconds)
+Received `Hello, World! 46` at 2024-01-25 20:05:57. (Time taken: 0.255118 seconds)
+Received `Hello, World! 47` at 2024-01-25 20:05:58. (Time taken: 0.248907 seconds)
+Received `Hello, World! 48` at 2024-01-25 20:05:59. (Time taken: 0.251707 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 88, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 84, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:07:02. (Time taken: 1.023988 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:07:03. (Time taken: 1.028032 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:07:04. (Time taken: 1.027215 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:07:05. (Time taken: 1.029499 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:07:06. (Time taken: 1.031055 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:07:07. (Time taken: 1.032829 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:07:08. (Time taken: 1.03607 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:07:09. (Time taken: 1.0386 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:07:10. (Time taken: 1.040068 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:07:11. (Time taken: 1.042981 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:07:12. (Time taken: 1.045477 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:07:13. (Time taken: 1.047395 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:07:14. (Time taken: 1.047148 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:07:15. (Time taken: 1.048423 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:07:16. (Time taken: 1.048863 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:07:17. (Time taken: 1.050959 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:07:18. (Time taken: 1.053642 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:07:19. (Time taken: 1.055023 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:07:20. (Time taken: 1.056922 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:07:21. (Time taken: 1.059393 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:07:22. (Time taken: 1.061402 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:07:23. (Time taken: 1.063056 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:07:24. (Time taken: 1.064903 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:07:25. (Time taken: 1.066304 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:07:26. (Time taken: 1.070396 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:07:27. (Time taken: 1.069571 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:07:28. (Time taken: 1.072585 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:07:29. (Time taken: 1.072975 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:07:30. (Time taken: 1.07525 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:07:31. (Time taken: 1.077551 seconds)
+Received `Hello, World! 30` at 2024-01-25 20:07:32. (Time taken: 1.079649 seconds)
+Received `Hello, World! 31` at 2024-01-25 20:07:33. (Time taken: 1.080325 seconds)
+Received `Hello, World! 32` at 2024-01-25 20:07:34. (Time taken: 1.086184 seconds)
+Received `Hello, World! 33` at 2024-01-25 20:07:35. (Time taken: 1.087438 seconds)
+Received `Hello, World! 34` at 2024-01-25 20:07:36. (Time taken: 1.125457 seconds)
+Received `Hello, World! 35` at 2024-01-25 20:07:37. (Time taken: 1.13543 seconds)
+Received `Hello, World! 36` at 2024-01-25 20:07:38. (Time taken: 1.094822 seconds)
+Received `Hello, World! 37` at 2024-01-25 20:07:39. (Time taken: 1.091672 seconds)
+Received `Hello, World! 38` at 2024-01-25 20:07:40. (Time taken: 1.100261 seconds)
+Received `Hello, World! 39` at 2024-01-25 20:07:41. (Time taken: 1.099124 seconds)
+Received `Hello, World! 40` at 2024-01-25 20:07:42. (Time taken: 1.095386 seconds)
+Received `Hello, World! 41` at 2024-01-25 20:07:43. (Time taken: 1.207494 seconds)
+Received `Hello, World! 42` at 2024-01-25 20:07:44. (Time taken: 1.09985 seconds)
+Received `Hello, World! 43` at 2024-01-25 20:07:45. (Time taken: 1.102886 seconds)
+^X^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 88, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 84, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:09:10. (Time taken: 0.228498 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:09:11. (Time taken: 0.22995 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:09:12. (Time taken: 0.232333 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:09:13. (Time taken: 0.23454 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:09:14. (Time taken: 0.237153 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:09:15. (Time taken: 0.253638 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:09:16. (Time taken: 0.244381 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:09:17. (Time taken: 0.24166 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:09:18. (Time taken: 0.255277 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:09:19. (Time taken: 0.246732 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:09:20. (Time taken: 0.25174 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:09:21. (Time taken: 0.252899 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:09:22. (Time taken: 0.253632 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:09:23. (Time taken: 0.260104 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:09:24. (Time taken: 0.25753 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:09:25. (Time taken: 0.257691 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:09:26. (Time taken: 0.271798 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:09:27. (Time taken: 0.26893 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:09:28. (Time taken: 0.269463 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:09:29. (Time taken: 0.267124 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:09:30. (Time taken: 0.26996 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:09:31. (Time taken: 0.274834 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:09:32. (Time taken: 0.270517 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:09:33. (Time taken: 0.336224 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:09:34. (Time taken: 0.279965 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:09:35. (Time taken: 0.287596 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:09:36. (Time taken: 0.27927 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:09:37. (Time taken: 0.282278 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:09:38. (Time taken: 0.282523 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:09:39. (Time taken: 0.287061 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 88, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 84, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 88, in <module>
+    
+  File "jaa369-d2p1_recv.py", line 84, in run
+    
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:15:49. (Time taken: 0.752743 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:15:50. (Time taken: 0.770569 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:15:51. (Time taken: 0.766617 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:15:52. (Time taken: 0.7635 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:15:53. (Time taken: 0.762295 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:15:54. (Time taken: 0.793028 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:15:55. (Time taken: 0.785549 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:15:56. (Time taken: 0.872038 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:15:57. (Time taken: 0.775324 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:15:58. (Time taken: 0.773317 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:15:59. (Time taken: 0.800442 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:16:00. (Time taken: 0.807065 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:16:01. (Time taken: 1.395896 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:16:02. (Time taken: 0.783168 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:16:03. (Time taken: 0.78053 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:16:04. (Time taken: 0.808169 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:16:05. (Time taken: 0.788703 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:16:06. (Time taken: 0.808409 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:16:07. (Time taken: 0.790615 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:16:08. (Time taken: 0.817078 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:16:09. (Time taken: 0.814439 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:16:10. (Time taken: 0.841945 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:16:11. (Time taken: 0.810975 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:16:12. (Time taken: 0.806463 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:16:13. (Time taken: 0.805605 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:16:14. (Time taken: 0.82362 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:16:15. (Time taken: 0.813655 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:16:16. (Time taken: 0.806944 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:16:17. (Time taken: 0.810227 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:16:18. (Time taken: 0.857537 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 87, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 83, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:18:57. (Time taken: 0.805961 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:18:58. (Time taken: 0.822358 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:18:59. (Time taken: 0.808661 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:19:00. (Time taken: 0.81259 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:19:01. (Time taken: 0.815472 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:19:02. (Time taken: 0.819607 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:19:03. (Time taken: 0.825145 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:19:04. (Time taken: 0.819493 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:19:05. (Time taken: 0.842335 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:19:06. (Time taken: 0.824583 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:19:07. (Time taken: 0.82715 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:19:08. (Time taken: 0.920655 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:19:09. (Time taken: 0.856363 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:19:10. (Time taken: 0.832749 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:19:11. (Time taken: 0.844733 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:19:12. (Time taken: 0.854403 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:19:13. (Time taken: 0.836092 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:19:14. (Time taken: 0.837582 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:19:15. (Time taken: 0.839953 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:19:16. (Time taken: 0.841871 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:19:17. (Time taken: 0.842168 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:19:18. (Time taken: 0.847238 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:19:19. (Time taken: 0.848015 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:19:20. (Time taken: 0.849774 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:19:21. (Time taken: 0.850403 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:19:22. (Time taken: 0.855886 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:19:23. (Time taken: 0.863575 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:19:24. (Time taken: 0.854958 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:19:25. (Time taken: 0.857063 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:19:26. (Time taken: 0.86116 seconds)
+Received `Hello, World! 30` at 2024-01-25 20:19:28. (Time taken: 0.864854 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 87, in <module>
+  File "jaa369-d2p1_recv.py", line 83, in run
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 5` at 2024-01-25 20:21:31. (Time taken: 1.01031 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:21:32. (Time taken: 1.014291 seconds)
+^CTraceback (most recent call last):
+  File "jaa369-d2p1_recv.py", line 70, in <module>
+    run()
+  File "jaa369-d2p1_recv.py", line 66, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1150, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:21:44. (Time taken: 0.465371 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:21:45. (Time taken: 0.433616 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:21:46. (Time taken: 0.432189 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:21:47. (Time taken: 0.440839 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:21:48. (Time taken: 0.435836 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:21:49. (Time taken: 0.439423 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:21:50. (Time taken: 0.440698 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:21:51. (Time taken: 0.440822 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:21:52. (Time taken: 0.444542 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:21:53. (Time taken: 0.445199 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:21:54. (Time taken: 0.448389 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:21:55. (Time taken: 0.449238 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:21:56. (Time taken: 0.451972 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:21:57. (Time taken: 0.455674 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:21:58. (Time taken: 0.457573 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:21:59. (Time taken: 0.458307 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:22:00. (Time taken: 0.465963 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:22:01. (Time taken: 0.46323 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:22:02. (Time taken: 0.465188 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:22:03. (Time taken: 0.474378 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:22:04. (Time taken: 0.468086 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:22:05. (Time taken: 0.471009 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:22:06. (Time taken: 0.47706 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:22:07. (Time taken: 0.617431 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:22:08. (Time taken: 0.472625 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:22:09. (Time taken: 0.476961 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:22:10. (Time taken: 0.478808 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:22:11. (Time taken: 0.480359 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:22:12. (Time taken: 0.48285 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:22:13. (Time taken: 0.484106 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ git config user.name Jesseadriano10
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ git config user.email jesseadrian@hotmail.com
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ chmod u+x calculate_latency.sh 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh < jaa369-d2p1_recv-broker.hivemq.com.txt 
+./calculate_latency.sh: line 17: : No such file or directory
+Runtime error (func=(main), adr=9): Divide by zero
+Average seconds: 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-broker.hivemq.com.txt 
+Average seconds: .46
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-broker.hivemq.com.txt 
+Average seconds: .4639
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ^C
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-broker.hivemq.com.txt 
+Average seconds: .4639 for file jaa369-d2p1_recv-broker.hivemq.com.txt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-broker.hivemq.com.txt > jaa369-latency_results.text
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to broker.emqx.io with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:34:32. (Time taken: 0.852887 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:34:33. (Time taken: 0.855148 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:34:34. (Time taken: 0.857108 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:34:35. (Time taken: 0.859179 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:34:36. (Time taken: 0.861244 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:34:37. (Time taken: 0.862918 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:34:38. (Time taken: 0.865066 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:34:39. (Time taken: 0.867011 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:34:40. (Time taken: 0.869107 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:34:41. (Time taken: 0.871189 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:34:42. (Time taken: 0.872988 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:34:43. (Time taken: 0.874972 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:34:44. (Time taken: 0.876736 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:34:45. (Time taken: 0.878861 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:34:46. (Time taken: 0.880733 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:34:47. (Time taken: 0.882688 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:34:48. (Time taken: 0.884786 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:34:49. (Time taken: 0.886476 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:34:50. (Time taken: 0.889043 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:34:51. (Time taken: 0.890831 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:34:52. (Time taken: 0.891937 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:34:53. (Time taken: 0.894124 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:34:54. (Time taken: 0.896284 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:34:55. (Time taken: 0.898229 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:34:56. (Time taken: 0.899569 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:34:57. (Time taken: 0.901058 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:34:58. (Time taken: 0.902949 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:34:59. (Time taken: 0.905472 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:35:00. (Time taken: 0.906148 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:35:01. (Time taken: 0.908266 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-broker.emqx.io.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to test.mosquitto.org with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:37:14. (Time taken: 0.693661 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:37:15. (Time taken: 0.698966 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:37:16. (Time taken: 0.698914 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:37:17. (Time taken: 0.701465 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:37:18. (Time taken: 0.702802 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:37:19. (Time taken: 0.705213 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:37:20. (Time taken: 0.706997 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:37:21. (Time taken: 0.708868 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:37:22. (Time taken: 0.710732 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:37:23. (Time taken: 0.714159 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:37:24. (Time taken: 0.713817 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:37:25. (Time taken: 0.933486 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:37:26. (Time taken: 0.717924 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:37:27. (Time taken: 0.719887 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:37:28. (Time taken: 0.722255 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:37:29. (Time taken: 0.725918 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:37:30. (Time taken: 0.816306 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:37:31. (Time taken: 0.727392 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:37:32. (Time taken: 0.7304 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:37:33. (Time taken: 0.731086 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:37:34. (Time taken: 0.833889 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:37:35. (Time taken: 0.735069 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:37:36. (Time taken: 1.010274 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:37:37. (Time taken: 0.738991 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:37:38. (Time taken: 0.740858 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:37:39. (Time taken: 0.742536 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:37:40. (Time taken: 0.745118 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:37:41. (Time taken: 0.74707 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:37:42. (Time taken: 0.750221 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:37:43. (Time taken: 0.74944 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-test.mosquitto.org.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_recv.py 
+Connected to mqtt.eclipseprojects.io with result code 0
+Received `Hello, World! 0` at 2024-01-25 20:40:06. (Time taken: 0.577789 seconds)
+Received `Hello, World! 1` at 2024-01-25 20:40:07. (Time taken: 0.580346 seconds)
+Received `Hello, World! 2` at 2024-01-25 20:40:08. (Time taken: 0.581825 seconds)
+Received `Hello, World! 3` at 2024-01-25 20:40:09. (Time taken: 0.583733 seconds)
+Received `Hello, World! 4` at 2024-01-25 20:40:10. (Time taken: 0.584909 seconds)
+Received `Hello, World! 5` at 2024-01-25 20:40:11. (Time taken: 0.586607 seconds)
+Received `Hello, World! 6` at 2024-01-25 20:40:12. (Time taken: 0.588902 seconds)
+Received `Hello, World! 7` at 2024-01-25 20:40:13. (Time taken: 0.590917 seconds)
+Received `Hello, World! 8` at 2024-01-25 20:40:14. (Time taken: 0.593385 seconds)
+Received `Hello, World! 9` at 2024-01-25 20:40:15. (Time taken: 0.593852 seconds)
+Received `Hello, World! 10` at 2024-01-25 20:40:16. (Time taken: 0.595331 seconds)
+Received `Hello, World! 11` at 2024-01-25 20:40:17. (Time taken: 0.597484 seconds)
+Received `Hello, World! 12` at 2024-01-25 20:40:18. (Time taken: 0.599704 seconds)
+Received `Hello, World! 13` at 2024-01-25 20:40:19. (Time taken: 0.601173 seconds)
+Received `Hello, World! 14` at 2024-01-25 20:40:20. (Time taken: 0.602209 seconds)
+Received `Hello, World! 15` at 2024-01-25 20:40:21. (Time taken: 0.603755 seconds)
+Received `Hello, World! 16` at 2024-01-25 20:40:22. (Time taken: 0.605772 seconds)
+Received `Hello, World! 17` at 2024-01-25 20:40:23. (Time taken: 0.608037 seconds)
+Received `Hello, World! 18` at 2024-01-25 20:40:24. (Time taken: 0.610096 seconds)
+Received `Hello, World! 19` at 2024-01-25 20:40:25. (Time taken: 0.61118 seconds)
+Received `Hello, World! 20` at 2024-01-25 20:40:26. (Time taken: 0.612725 seconds)
+Received `Hello, World! 21` at 2024-01-25 20:40:27. (Time taken: 0.615199 seconds)
+Received `Hello, World! 22` at 2024-01-25 20:40:28. (Time taken: 0.617127 seconds)
+Received `Hello, World! 23` at 2024-01-25 20:40:29. (Time taken: 0.619591 seconds)
+Received `Hello, World! 24` at 2024-01-25 20:40:30. (Time taken: 0.621137 seconds)
+Received `Hello, World! 25` at 2024-01-25 20:40:31. (Time taken: 0.62205 seconds)
+Received `Hello, World! 26` at 2024-01-25 20:40:32. (Time taken: 0.625119 seconds)
+Received `Hello, World! 27` at 2024-01-25 20:40:33. (Time taken: 0.626286 seconds)
+Received `Hello, World! 28` at 2024-01-25 20:40:34. (Time taken: 0.628541 seconds)
+Received `Hello, World! 29` at 2024-01-25 20:40:35. (Time taken: 0.630216 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-test.mosquitto.org.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p1_recv-mqtt.eclipseprojects.io.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_recv_encrypted.py 
+Connected to broker.hivemq.com with result code 0
+Traceback (most recent call last):
+  File "jaa369-d2p2_recv_encrypted.py", line 80, in <module>
+    run()
+  File "jaa369-d2p2_recv_encrypted.py", line 76, in run
+    client.loop_forever()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1756, in loop_forever
+    rc = self._loop(timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1164, in _loop
+    rc = self.loop_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 1556, in loop_read
+    rc = self._packet_read()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 2439, in _packet_read
+    rc = self._packet_handle()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3033, in _packet_handle
+    return self._handle_publish()
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3327, in _handle_publish
+    self._handle_on_message(message)
+  File "/home/pi/.local/lib/python3.7/site-packages/paho/mqtt/client.py", line 3570, in _handle_on_message
+    on_message(self, self._userdata, message)
+  File "jaa369-d2p2_recv_encrypted.py", line 40, in on_message
+    payload = json.loads(msg.payload)
+  File "/usr/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_recv_encrypted.py 
+Connected to broker.hivemq.com with result code 0
+Received `Hello, World! 0` at 2024-01-25 21:07:53. (Time taken: 0.757687 seconds)
+Received `Hello, World! 1` at 2024-01-25 21:07:54. (Time taken: 0.58327 seconds)
+Received `Hello, World! 2` at 2024-01-25 21:07:55. (Time taken: 0.585617 seconds)
+Received `Hello, World! 3` at 2024-01-25 21:07:56. (Time taken: 0.591367 seconds)
+Received `Hello, World! 4` at 2024-01-25 21:07:57. (Time taken: 0.618167 seconds)
+Received `Hello, World! 5` at 2024-01-25 21:07:58. (Time taken: 0.597965 seconds)
+Received `Hello, World! 6` at 2024-01-25 21:07:59. (Time taken: 0.598993 seconds)
+Received `Hello, World! 7` at 2024-01-25 21:08:00. (Time taken: 0.622703 seconds)
+Received `Hello, World! 8` at 2024-01-25 21:08:01. (Time taken: 0.650722 seconds)
+Received `Hello, World! 9` at 2024-01-25 21:08:02. (Time taken: 0.608594 seconds)
+Received `Hello, World! 10` at 2024-01-25 21:08:03. (Time taken: 0.607195 seconds)
+Received `Hello, World! 11` at 2024-01-25 21:08:04. (Time taken: 0.624319 seconds)
+Received `Hello, World! 12` at 2024-01-25 21:08:05. (Time taken: 0.624473 seconds)
+Received `Hello, World! 13` at 2024-01-25 21:08:06. (Time taken: 0.621983 seconds)
+Received `Hello, World! 14` at 2024-01-25 21:08:07. (Time taken: 0.625242 seconds)
+Received `Hello, World! 15` at 2024-01-25 21:08:08. (Time taken: 0.627177 seconds)
+Received `Hello, World! 16` at 2024-01-25 21:08:09. (Time taken: 0.634048 seconds)
+Received `Hello, World! 17` at 2024-01-25 21:08:10. (Time taken: 0.652058 seconds)
+Received `Hello, World! 18` at 2024-01-25 21:08:11. (Time taken: 0.642248 seconds)
+Received `Hello, World! 19` at 2024-01-25 21:08:12. (Time taken: 0.649995 seconds)
+Received `Hello, World! 20` at 2024-01-25 21:08:13. (Time taken: 0.650986 seconds)
+Received `Hello, World! 21` at 2024-01-25 21:08:14. (Time taken: 0.662379 seconds)
+Received `Hello, World! 22` at 2024-01-25 21:08:15. (Time taken: 0.995605 seconds)
+Received `Hello, World! 23` at 2024-01-25 21:08:16. (Time taken: 0.783429 seconds)
+Received `Hello, World! 24` at 2024-01-25 21:08:17. (Time taken: 0.687553 seconds)
+Received `Hello, World! 25` at 2024-01-25 21:08:18. (Time taken: 0.673234 seconds)
+Received `Hello, World! 26` at 2024-01-25 21:08:19. (Time taken: 0.677786 seconds)
+Received `Hello, World! 27` at 2024-01-25 21:08:20. (Time taken: 0.681263 seconds)
+Received `Hello, World! 28` at 2024-01-25 21:08:21. (Time taken: 0.685848 seconds)
+Received `Hello, World! 29` at 2024-01-25 21:08:22. (Time taken: 0.701284 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_recv_encrypted.py 
+Connected to broker.emqx.io with result code 0
+Received `Hello, World! 0` at 2024-01-25 21:12:28. (Time taken: 0.545758 seconds)
+Received `Hello, World! 1` at 2024-01-25 21:12:29. (Time taken: 0.404149 seconds)
+Received `Hello, World! 2` at 2024-01-25 21:12:30. (Time taken: 0.407478 seconds)
+Received `Hello, World! 3` at 2024-01-25 21:12:31. (Time taken: 0.412174 seconds)
+Received `Hello, World! 4` at 2024-01-25 21:12:32. (Time taken: 0.414052 seconds)
+Received `Hello, World! 5` at 2024-01-25 21:12:33. (Time taken: 0.416608 seconds)
+Received `Hello, World! 6` at 2024-01-25 21:12:34. (Time taken: 0.421081 seconds)
+Received `Hello, World! 7` at 2024-01-25 21:12:35. (Time taken: 0.430775 seconds)
+Received `Hello, World! 8` at 2024-01-25 21:12:36. (Time taken: 0.435117 seconds)
+Received `Hello, World! 9` at 2024-01-25 21:12:37. (Time taken: 0.439305 seconds)
+Received `Hello, World! 10` at 2024-01-25 21:12:38. (Time taken: 0.441255 seconds)
+Received `Hello, World! 11` at 2024-01-25 21:12:39. (Time taken: 0.446032 seconds)
+Received `Hello, World! 12` at 2024-01-25 21:12:40. (Time taken: 0.452187 seconds)
+Received `Hello, World! 13` at 2024-01-25 21:12:41. (Time taken: 0.456349 seconds)
+Received `Hello, World! 14` at 2024-01-25 21:12:42. (Time taken: 0.458491 seconds)
+Received `Hello, World! 15` at 2024-01-25 21:12:43. (Time taken: 0.461303 seconds)
+Received `Hello, World! 16` at 2024-01-25 21:12:44. (Time taken: 0.465745 seconds)
+Received `Hello, World! 17` at 2024-01-25 21:12:45. (Time taken: 0.475512 seconds)
+Received `Hello, World! 18` at 2024-01-25 21:12:46. (Time taken: 0.47987 seconds)
+Received `Hello, World! 19` at 2024-01-25 21:12:47. (Time taken: 0.482164 seconds)
+Received `Hello, World! 20` at 2024-01-25 21:12:48. (Time taken: 0.485836 seconds)
+Received `Hello, World! 21` at 2024-01-25 21:12:49. (Time taken: 0.489597 seconds)
+Received `Hello, World! 22` at 2024-01-25 21:12:50. (Time taken: 0.496472 seconds)
+Received `Hello, World! 23` at 2024-01-25 21:12:51. (Time taken: 0.500574 seconds)
+Received `Hello, World! 24` at 2024-01-25 21:12:52. (Time taken: 0.502678 seconds)
+Received `Hello, World! 25` at 2024-01-25 21:12:53. (Time taken: 0.506703 seconds)
+Received `Hello, World! 26` at 2024-01-25 21:12:54. (Time taken: 0.510757 seconds)
+Received `Hello, World! 27` at 2024-01-25 21:12:55. (Time taken: 0.516735 seconds)
+Received `Hello, World! 28` at 2024-01-25 21:12:56. (Time taken: 0.520855 seconds)
+Received `Hello, World! 29` at 2024-01-25 21:12:57. (Time taken: 0.523049 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_recv_encrypted.py 
+Connected to test.mosquitto.org with result code 0
+Received `Hello, World! 0` at 2024-01-25 21:13:59. (Time taken: 0.99704 seconds)
+Received `Hello, World! 1` at 2024-01-25 21:14:00. (Time taken: 0.854083 seconds)
+Received `Hello, World! 2` at 2024-01-25 21:14:01. (Time taken: 0.866387 seconds)
+Received `Hello, World! 3` at 2024-01-25 21:14:02. (Time taken: 1.145882 seconds)
+Received `Hello, World! 4` at 2024-01-25 21:14:03. (Time taken: 0.866593 seconds)
+Received `Hello, World! 5` at 2024-01-25 21:14:04. (Time taken: 0.871084 seconds)
+Received `Hello, World! 6` at 2024-01-25 21:14:05. (Time taken: 0.874881 seconds)
+Received `Hello, World! 7` at 2024-01-25 21:14:06. (Time taken: 0.879887 seconds)
+Received `Hello, World! 8` at 2024-01-25 21:14:07. (Time taken: 0.883903 seconds)
+Received `Hello, World! 9` at 2024-01-25 21:14:08. (Time taken: 0.886636 seconds)
+Received `Hello, World! 10` at 2024-01-25 21:14:09. (Time taken: 0.891709 seconds)
+Received `Hello, World! 11` at 2024-01-25 21:14:10. (Time taken: 0.896808 seconds)
+Received `Hello, World! 12` at 2024-01-25 21:14:11. (Time taken: 0.898436 seconds)
+Received `Hello, World! 13` at 2024-01-25 21:14:12. (Time taken: 0.903253 seconds)
+Received `Hello, World! 14` at 2024-01-25 21:14:13. (Time taken: 0.907083 seconds)
+Received `Hello, World! 15` at 2024-01-25 21:14:14. (Time taken: 0.910845 seconds)
+Received `Hello, World! 16` at 2024-01-25 21:14:15. (Time taken: 0.914649 seconds)
+Received `Hello, World! 17` at 2024-01-25 21:14:16. (Time taken: 0.919889 seconds)
+Received `Hello, World! 18` at 2024-01-25 21:14:17. (Time taken: 0.923068 seconds)
+Received `Hello, World! 19` at 2024-01-25 21:14:18. (Time taken: 0.925571 seconds)
+Received `Hello, World! 20` at 2024-01-25 21:14:19. (Time taken: 0.93316 seconds)
+Received `Hello, World! 21` at 2024-01-25 21:14:20. (Time taken: 0.93637 seconds)
+Received `Hello, World! 22` at 2024-01-25 21:14:21. (Time taken: 0.941466 seconds)
+Received `Hello, World! 23` at 2024-01-25 21:14:22. (Time taken: 0.945007 seconds)
+Received `Hello, World! 24` at 2024-01-25 21:14:23. (Time taken: 0.950227 seconds)
+Received `Hello, World! 25` at 2024-01-25 21:14:24. (Time taken: 0.956597 seconds)
+Received `Hello, World! 26` at 2024-01-25 21:14:25. (Time taken: 0.958813 seconds)
+Received `Hello, World! 27` at 2024-01-25 21:14:26. (Time taken: 0.969544 seconds)
+Received `Hello, World! 28` at 2024-01-25 21:14:27. (Time taken: 0.96609 seconds)
+Received `Hello, World! 29` at 2024-01-25 21:14:28. (Time taken: 0.970386 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_recv_encrypted.py 
+Connected to mqtt.eclipseprojects.io with result code 0
+Received `Hello, World! 0` at 2024-01-25 21:15:05. (Time taken: 1.084998 seconds)
+Received `Hello, World! 1` at 2024-01-25 21:15:06. (Time taken: 0.947491 seconds)
+Received `Hello, World! 2` at 2024-01-25 21:15:07. (Time taken: 0.954895 seconds)
+Received `Hello, World! 3` at 2024-01-25 21:15:08. (Time taken: 0.959443 seconds)
+Received `Hello, World! 4` at 2024-01-25 21:15:09. (Time taken: 0.963421 seconds)
+Received `Hello, World! 5` at 2024-01-25 21:15:10. (Time taken: 0.965954 seconds)
+Received `Hello, World! 6` at 2024-01-25 21:15:11. (Time taken: 0.97025 seconds)
+Received `Hello, World! 7` at 2024-01-25 21:15:12. (Time taken: 0.973932 seconds)
+Received `Hello, World! 8` at 2024-01-25 21:15:13. (Time taken: 0.983782 seconds)
+Received `Hello, World! 9` at 2024-01-25 21:15:14. (Time taken: 0.986163 seconds)
+Received `Hello, World! 10` at 2024-01-25 21:15:15. (Time taken: 0.990715 seconds)
+Received `Hello, World! 11` at 2024-01-25 21:15:16. (Time taken: 0.994834 seconds)
+Received `Hello, World! 12` at 2024-01-25 21:15:17. (Time taken: 0.999151 seconds)
+Received `Hello, World! 13` at 2024-01-25 21:15:18. (Time taken: 1.006448 seconds)
+Received `Hello, World! 14` at 2024-01-25 21:15:19. (Time taken: 1.008433 seconds)
+Received `Hello, World! 15` at 2024-01-25 21:15:20. (Time taken: 1.013313 seconds)
+Received `Hello, World! 16` at 2024-01-25 21:15:21. (Time taken: 1.017657 seconds)
+Received `Hello, World! 17` at 2024-01-25 21:15:22. (Time taken: 1.02186 seconds)
+Received `Hello, World! 18` at 2024-01-25 21:15:23. (Time taken: 1.031063 seconds)
+Received `Hello, World! 19` at 2024-01-25 21:15:24. (Time taken: 1.034711 seconds)
+Received `Hello, World! 20` at 2024-01-25 21:15:25. (Time taken: 1.038872 seconds)
+Received `Hello, World! 21` at 2024-01-25 21:15:26. (Time taken: 1.043276 seconds)
+Received `Hello, World! 22` at 2024-01-25 21:15:27. (Time taken: 1.047404 seconds)
+Received `Hello, World! 23` at 2024-01-25 21:15:29. (Time taken: 0.052898 seconds)
+Received `Hello, World! 24` at 2024-01-25 21:15:30. (Time taken: 0.056388 seconds)
+Received `Hello, World! 25` at 2024-01-25 21:15:31. (Time taken: 0.06078 seconds)
+Received `Hello, World! 26` at 2024-01-25 21:15:32. (Time taken: 0.065232 seconds)
+Received `Hello, World! 27` at 2024-01-25 21:15:33. (Time taken: 0.069473 seconds)
+Received `Hello, World! 28` at 2024-01-25 21:15:34. (Time taken: 0.075337 seconds)
+Received `Hello, World! 29` at 2024-01-25 21:15:35. (Time taken: 0.077619 seconds)
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p2_decrypted-broker.hivemq.com.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p2_decrypted-broker.emqx.io.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p2_decrypted-test.mosquitto.org.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ./calculate_latency.sh jaa369-d2p2_decrypted-mqtt.eclipseprojects.io.txt >> jaa369-latency_results.txt 
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ scp ../Deliverable1/
+../Deliverable1/jaa369-a1-part1.py   ../Deliverable1/jaa369-a1-part2.py   ../Deliverable1/PCF8591.py           ../Deliverable1/__pycache__/
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ scp ../Deliverable1/PCF8591.py ../Deliverable1/jaa369-a1-part2.py ./
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ ls
+calculate_latency.sh                    jaa369-d2p1_recv-mqtt.eclipseprojects.io.txt  jaa369-d2p2_decrypted-mqtt.eclipseprojects.io.txt  jaa369-latency_results.txt
+jaa369-a1-part2.py                      jaa369-d2p1_recv.py                           jaa369-d2p2_decrypted-test.mosquitto.org.txt       PCF8591.py
+jaa369-d2p1_publish.py                  jaa369-d2p1_recv-test.mosquitto.org.txt       jaa369-d2p2-key.key
+jaa369-d2p1_recv-broker.emqx.io.txt     jaa369-d2p2_decrypted-broker.emqx.io.txt      jaa369-d2p2_publish_encrypted.py
+jaa369-d2p1_recv-broker.hivemq.com.txt  jaa369-d2p2_decrypted-broker.hivemq.com.txt   jaa369-d2p2_recv_encrypted.py
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ 

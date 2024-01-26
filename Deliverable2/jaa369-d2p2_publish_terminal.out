@@ -1,0 +1,627 @@
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_publish.py 
+  File "jaa369-d2p1_publish.py", line 9
+    broker = "broker.emqx.io"           #avg = 0.055 s
+    ^
+IndentationError: unexpected indent
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_publish.py 
+Connected to broker.emqx.io
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 20:34:32"}` to topic `jaa369_publish`
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 20:34:33"}` to topic `jaa369_publish`
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 20:34:34"}` to topic `jaa369_publish`
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 20:34:35"}` to topic `jaa369_publish`
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 20:34:36"}` to topic `jaa369_publish`
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 20:34:37"}` to topic `jaa369_publish`
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 20:34:38"}` to topic `jaa369_publish`
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 20:34:39"}` to topic `jaa369_publish`
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 20:34:40"}` to topic `jaa369_publish`
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 20:34:41"}` to topic `jaa369_publish`
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 20:34:42"}` to topic `jaa369_publish`
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 20:34:43"}` to topic `jaa369_publish`
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 20:34:44"}` to topic `jaa369_publish`
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 20:34:45"}` to topic `jaa369_publish`
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 20:34:46"}` to topic `jaa369_publish`
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 20:34:47"}` to topic `jaa369_publish`
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 20:34:48"}` to topic `jaa369_publish`
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 20:34:49"}` to topic `jaa369_publish`
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 20:34:50"}` to topic `jaa369_publish`
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 20:34:51"}` to topic `jaa369_publish`
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 20:34:52"}` to topic `jaa369_publish`
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 20:34:53"}` to topic `jaa369_publish`
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 20:34:54"}` to topic `jaa369_publish`
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 20:34:55"}` to topic `jaa369_publish`
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 20:34:56"}` to topic `jaa369_publish`
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 20:34:57"}` to topic `jaa369_publish`
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 20:34:58"}` to topic `jaa369_publish`
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 20:34:59"}` to topic `jaa369_publish`
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 20:35:00"}` to topic `jaa369_publish`
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 20:35:01"}` to topic `jaa369_publish`
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 20:35:03"}` to topic `jaa369_publish`
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_publish.py 
+Connected to test.mosquitto.org
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 20:37:14"}` to topic `jaa369_publish`
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 20:37:15"}` to topic `jaa369_publish`
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 20:37:16"}` to topic `jaa369_publish`
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 20:37:17"}` to topic `jaa369_publish`
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 20:37:18"}` to topic `jaa369_publish`
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 20:37:19"}` to topic `jaa369_publish`
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 20:37:20"}` to topic `jaa369_publish`
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 20:37:21"}` to topic `jaa369_publish`
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 20:37:22"}` to topic `jaa369_publish`
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 20:37:23"}` to topic `jaa369_publish`
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 20:37:24"}` to topic `jaa369_publish`
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 20:37:25"}` to topic `jaa369_publish`
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 20:37:26"}` to topic `jaa369_publish`
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 20:37:27"}` to topic `jaa369_publish`
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 20:37:28"}` to topic `jaa369_publish`
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 20:37:29"}` to topic `jaa369_publish`
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 20:37:30"}` to topic `jaa369_publish`
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 20:37:31"}` to topic `jaa369_publish`
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 20:37:32"}` to topic `jaa369_publish`
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 20:37:33"}` to topic `jaa369_publish`
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 20:37:34"}` to topic `jaa369_publish`
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 20:37:35"}` to topic `jaa369_publish`
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 20:37:36"}` to topic `jaa369_publish`
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 20:37:37"}` to topic `jaa369_publish`
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 20:37:38"}` to topic `jaa369_publish`
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 20:37:39"}` to topic `jaa369_publish`
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 20:37:40"}` to topic `jaa369_publish`
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 20:37:41"}` to topic `jaa369_publish`
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 20:37:42"}` to topic `jaa369_publish`
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 20:37:43"}` to topic `jaa369_publish`
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 20:37:45"}` to topic `jaa369_publish`
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p1_publish.py 
+Connected to mqtt.eclipseprojects.io
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 20:40:06"}` to topic `jaa369_publish`
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 20:40:07"}` to topic `jaa369_publish`
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 20:40:08"}` to topic `jaa369_publish`
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 20:40:09"}` to topic `jaa369_publish`
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 20:40:10"}` to topic `jaa369_publish`
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 20:40:11"}` to topic `jaa369_publish`
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 20:40:12"}` to topic `jaa369_publish`
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 20:40:13"}` to topic `jaa369_publish`
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 20:40:14"}` to topic `jaa369_publish`
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 20:40:15"}` to topic `jaa369_publish`
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 20:40:16"}` to topic `jaa369_publish`
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 20:40:17"}` to topic `jaa369_publish`
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 20:40:18"}` to topic `jaa369_publish`
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 20:40:19"}` to topic `jaa369_publish`
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 20:40:20"}` to topic `jaa369_publish`
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 20:40:21"}` to topic `jaa369_publish`
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 20:40:22"}` to topic `jaa369_publish`
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 20:40:23"}` to topic `jaa369_publish`
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 20:40:24"}` to topic `jaa369_publish`
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 20:40:25"}` to topic `jaa369_publish`
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 20:40:26"}` to topic `jaa369_publish`
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 20:40:27"}` to topic `jaa369_publish`
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 20:40:28"}` to topic `jaa369_publish`
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 20:40:29"}` to topic `jaa369_publish`
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 20:40:30"}` to topic `jaa369_publish`
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 20:40:31"}` to topic `jaa369_publish`
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 20:40:32"}` to topic `jaa369_publish`
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 20:40:33"}` to topic `jaa369_publish`
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 20:40:34"}` to topic `jaa369_publish`
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 20:40:35"}` to topic `jaa369_publish`
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 20:40:37"}` to topic `jaa369_publish`
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_publish_encrypted.py 
+Connected to broker.hivemq.com
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 21:06:26"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyGypm9gQ-065paVXFpROQfkiscEiq5Fk4_xI7c80KnxE2xepzPrgyVlCCUd4kzysI8nGcESVmU7ohGP35fkFEDkU1My9lSLbzykhSQOsn2w-MDd7B6Jzno165LVdGd77QC89_ukF8stKkOOZl0t4wC-ng2o-wvab2KeUbG1lEu7DuA='
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 21:06:27"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyGztnwYaCD1RK9NGBB04suRdAIMskoqMx3WkoUn_aB855iOmhX-uvl9ov5I8C3gCC0UXr9s-kdMQduoyU_dIcP6noZXJu7BgvaBshlsA0Qe9aw713mN9XnHBsvv0nZiu_9wWCFp6lzp9M0CAs1gFwxOu9rByl9xSRmD3YE1h6Guiko='
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 21:06:28"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG0CYykwO3GWEoTqDloM2jdhWtfurzI3Ns2xmkfftCDWjm2fRpWVV6NHd1jHbCXTfd9wNae8aC7j12aQXOxK-L9pYzwiUn5SA-RyEluqDubm6fVGRYhH4UfymH12FEclpuMgMd95D1MMRw-tTZlhFjfaqDvC7H-Zu3XCOaVN2ocWpU='
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 21:06:29"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG139JKQqrXZ6g3DRZ2a499lQdv1xqaMhY3v2GtbtAtAMuZ95Kl-biyNQ8euIHMRt9fYbWofDX5aQJ6hp-sm681E37PSe6wexAp5UQp3Qrj7sNxnpiXCwNev56CSjSXMsnu2s2wha9tW6SugeLobxDk-B01Q8IwUiqvHZFIp3Hj0G4='
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 21:06:30"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG2n9NDKhD6vdiC5VqYNLGn7akXecXsUgH3y-Jz_X4Z_2e85leZUqjH-nSMFig8QIwjyfcehRif3K2cQaXSxPFiV5sJjI3vdq5y1sYsyH4uJcv02nc7sykx0nogZEEErNEgPMbeeuAbN_WaIuD18CaWnKMwGUpgKyxE1ualdH4oSE0='
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 21:06:31"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG3C_0GRTrcYeMXlf6v61xwVFG9tXzOSj0_-g1hywcDR2uJdEOXZlEOu_Dmo5Mn3hpzQgV89bwHTUi5EpcbIiZplMmOJz29ihJ2sYMu4iqLNi7ifheHJzfD9UJHXxRvURXPKpBbGxNEwjWYuifwb6M5eHaWha1jeePJIAVVy4Ydl00='
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 21:06:32"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG4KKaoM_iuNFmGOZAhwyS742IcrRFctyG0XInhgnu8P98pNZFVLOFKiM_l9NDI2ipat5RGeSNr2NSOqFByWzHitQ4ZR8okrCARUaKJ_RyP2CG-PLV0gaA0uQ2CFRUtIkCzE42V4NkorhYBO1T-jI7xW0M34uLP23muusmHePbkwj0='
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 21:06:33"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG5-J3ZNkOYi3oQgYe5Jm7rnKTtJFWbaf_BxA_Ulu7n-Pyfgx5TfJe1bAvyWzIbaQwfGokIOwB6cYet9_Su-blmrwSODsnbFV_S39qB6p25QZOSGVxpMIsfiHs_G3PUdhYKuhab7F2b0GoHPOy3CsmNLqtGpvQz0yZyEDU6hi8Nq_g='
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 21:06:34"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG63-kVNw15TEIBchb27HlDMNFo_Ky09a18gR1pI2KKiwJLsYnVaoTBH9meLiNpDBGvq5xlWbLytlhy4LwNUZOCmkbebtt0ExKH-lGVisIWoGA0Wnr0X47Yzd8xFeMiGTInUSXRpX9_3zGYm2hpdE2nouW2zff3spvb7FR9u2-RWPs='
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 21:06:35"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG7t9HDRDPb2rWkfkL8h2q8844ED3Bkbjc8KQzXB19eOIMFmoH9bSwEtP4FXc3Pvs8QmBlH2TALO9SYBbHJlnFKdTwJB0W6YZ98rKZIRBDTXjxfW5peMMAuZ1FwcPb7XtGuwLkwPiSAelsU1GyJ09ExuoCMz_FXYpt08yGbVstQ2oA='
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 21:06:36"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG8fFIAGwvq4yvNNHL2OuYjFPGYAel94JX0Vnu8iPmp59nG94TNFfwxxudzyEpNON9OxHgex0AB3Eyllr3mH1eo5NympvTflg8Oyr4c5peNN6prJacdeRiA8_rPFIhdmgqsc6YKz1vPhY8AQgwIEbP-wkowprbpiy85J6rsOfV1VtQ='
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 21:06:37"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG9BoruKM61Iwo20IbITXmORkShtitbe9XGvIIg4VMBwI1roNQOPnVsHNTQJDuja32EV7VscyNSQe3Oo7R7Ui7Es9WbGupgxsF9bHVxVpMPu17IM4HQvGwm45hljm8x_wl1z98GCLpuazP3Pb4ZcPGx0LX8t1_FE39Lm2CSGQoTr0k='
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 21:06:38"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyG-Sv_HooEPwnIKttL8cfJVQPHBUJRZT7eqTOw1YOeEKfHlYMJ-xSxSFUquuV0jN9AjXp-adpW-iI1sewo4cIEzw6d54l0hY2d01mKTOWAt-3iO5yRkFwunBZIJhsjcO04BctZCr6Q-TOitNpY5R_tFBTFeSfd7uSb3rVmLy0xRSQQ='
+^CTraceback (most recent call last):
+  File "jaa369-d2p2_publish_encrypted.py", line 83, in <module>
+    run()
+  File "jaa369-d2p2_publish_encrypted.py", line 73, in run
+    publish(client)
+  File "jaa369-d2p2_publish_encrypted.py", line 62, in publish
+    time.sleep(1)
+KeyboardInterrupt
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_publish_encrypted.py 
+Connected to broker.hivemq.com
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 21:07:53"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIJWB1lwqjtwn5SoDVzy3pQM8G6Xz1cLNup_6s49vv_GAyU1WeziRhRydhDGs7iiy8RzUu7zVXnjc_XRuBpY_Unrfp-4gcn5kAcdTyKY0OBqNFTfq8bPjszmEmvhjjWfq0JIlN5CBynKNX0CHCyBpfKcLpUiCC0eH8sbcmiru7dfMA='
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 21:07:54"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIKN2bwiW3zynGKpsY42UPAt-mAtg68S819g9tX7kXwja-H8fJNx2dADjO7iogSUOqJaKfk6I5b3_LZ6RPY-gDeUG2GjDZi9XAaJVJE45RmDn2JOaToezSaQ7vLw9l2g6fdb-YE62aqcTfd3pYMmTc45L-6B8WMwDc5D3I1W727iX8='
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 21:07:55"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyILBEz5g7aN9CiXTYt-ABYuisHl027J-_41qdtZrGy2VND2iDbHssgaYBwzqYme6crqGSn9Vpv3Me1AZWdmGbY6IjJMmSiuDNuAJg0PBF3z4AWhzh04zvPsEDEDZBABImC1lKJxbAfb7UdrIbHrE7CH_bcCU-_GwAhEBqwreVj5mqs='
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 21:07:56"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIMTx0E0UI-rE4EP2fanWWh0KYr7WctK0K53dfudHJV8i4XYxR2POML9NGq9GuX_5Pt9mPOf2k5e1M1mCIwrpR22JtG2mR6CmuHHBWjTSyzvAEUb4YvPgTbFp4GZjtYmmgKz5fZAReq0UIcAKjTWdwM0VHSNv32bWqM17rZevWirhc='
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 21:07:57"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyINF66VhyaNg2r-Gx-kHZPUJE5LHp_XUxcwcn1PoyDh3-6KZWIYoKDC7FMdctyFApRhUcZntKiHKzyETTowKZToEBOGwR09lF4oZ0EOBjD3HPNh_v8WIzxH829vIlnezKFaEFiTuMNyWtI07uX83JdF0c1Xf48kxZq8nuvuB-tCqB8='
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 21:07:58"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIO13fzSbstaidqrdEk6erHYUBbCJqP9-mzEmd3-dIyBEGMXo1dJ9hdpH1uKpj_Yoc3k3WUrpWYR2DKfuf-2z6x2H99UwYALOQgMuURx-bB0qIHDJ1SSgbBAuF6ALWWFKV-hNEM9ylgwmYtx_peAW4Md3LCObZMF1xnRCLz2gmgo14='
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 21:07:59"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIPIHoTw6nYOhdd7XHl7790ALycEKLJix_sjhrzIJ6M5rEFF4e5r_Dk17tSrUYz-YF-1BkCNjY_iPHac08HgT-izcxbCscDUC6cxJfJaUJ-NkbWHOCLW4ENEREJr-UoPLdGICy11Aq772M1RZgmDCPmhNNaY7AyjVinsrXx_uN9CAs='
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 21:08:00"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIQGANZzOnzuR1Pqe477Gy6oRfzQBBiCRxv8mK77tn4_9oyi6s33oNF9yOaA4SoFvcQdZllkSUf65sowAp-YGISzmAiEOtABCCRJGj7QYINHUKxY6Kdvsms22IBBc-WUPEdqyW7nKCT-skjozv_zWrfZI6UOf8FwyRQO9EQiJNM_0k='
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 21:08:01"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIROPZEJltBDLZFKOVI2e4kRnPlktvSeDsdOaAyyxPDQSNgWQkXsK-oFN-7gKXif1lvmzTO9OirZe5Icqmt7HKwp2Y0uYhUOmbQ_4SVhL5CtdH_zd1cFm5Pc44h4WFSZmuMA36NgOdfsmCe2np0FqAhrTRJb8kR6RZMiinhRlApYNY='
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 21:08:02"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyISKGkQd-znpx5a63r-vODynnaoJ9tQOGdCPWxsGLwgUJ2n6Fnhr9hL6A-bxvwXd_O_srI5tMPywKm6XpdT3PWb3RhQtrszXm79pxWPUyjoM3yEXi48shg-HoNuK7SGrIu6tYuAOJjfx5M5bfDf7u9XfXRXisHD-17qBL6oy7GdaZs='
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 21:08:03"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyITsqohQepUVgE9vjiGzrElDVGb8_FjAbr_9X78BULplNC_Dsl-f1yJ7hy8h7vZAlCpGzyp06wzbf2q0irNiszjAgFWoiibUMrN3c19zHufDT3iFoIdT23XWNCtN1pjH626IIgTT7eBL9pjaGEI47BtjgrY_lskqYj7sivmjaRHKYg='
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 21:08:04"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIUNmPtw7Ld9akVkbNW5WwlntyS8xDXZdCtaL79RJgho7UrOJx3GnYC1a8_3kD8aE6OTriijc4Bq7GM0tQqwLb0BP4aBtFhcf9QJlgSWCS8UoBWvnYu4LnisCjCrv_z4_oAMCrNyAb5NsjpvYGTdOCECfA9Q9T3IV4UV8HmX3OnlVI='
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 21:08:05"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIVxXAN-iY6Qmd95jwt10G9KmBz3ZJ5lg96-Z_iPT9SdTzXT8tqcdsE-xb0g86Olf7k91mIRAsgYexUds1BNo3HghSUd_pgr_ZEjR7q8l1Dpeg3ltVHP2WnchaFL4qCuxlL_y1gxlFXoqhsdu9hoiirJ9GklDus6wh2uoRGsQJ1c2I='
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 21:08:06"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIW6Cbf9PDqHGYNa50A2ur6aNKdScfLeQHUfT6ONceG-X3jj3O5KUP7Wg7SYZn0TEGr3U1wokoO3oNwnBucQXXbGjN1hR5oT-4Kh7r1xbZfU7DBn3FsztTAiEpLIRsqDndQghU0-olhPYy0z4OGqmcwOIEy9SaSWnyUWIcQ-nL5nlg='
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 21:08:07"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIXG4rF70EXFjCtxwHGOiLB9OGjEg0TeRauYVV2wSiaSkpmozzmu1SOxBQEUWOuXGha1AO4apBsrtHdilMwAq39RsdV42c2ceT_4fTWF0JSb9lhfgkOpT6GkziOS5RR4CY12QARfuvi7CXibmKUGg-IbHOJEYJ_VUN-1GRv9CHPdgY='
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 21:08:08"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIYM58NlQGWIyWRndd4CwTjWos7LO5P724FOw0MnwZx7EUH92rJGiHrVtrnfACsoFbHljxcZAQPTI3_6BDgG9a-8FeP7ua6zP-tpi8eUcbDW0FCxjQRb_fLgZVHFLEdZbyE_2X0Kb6w5Zo5D_8-7QvuO7LTjNVlR1tHnnbAF8N8Mn0='
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 21:08:09"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIZ6sGp483M3Is1eM1wr_QF32oISQmVSOKZ3tUuX_8fNsS_yiYvzNO_6luO4dvoG3CcslN7tHlBFi9Ua-pYeosHk8us5Tdv-0q_7RXYKDpq1OteAMoRhyJRSiWovz0xylu6SDIWvjhymFUNYaGJgVcS48x2mRvcOY1nS9ohl2uxBCk='
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 21:08:10"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIaSZ2uwlH6Y78XIdIcEPQ3qWwByTU6vofPA6vHPJhaIEYoIar4aTmwLA_jjcScGQ0YyBXmJt54h3t6PqZfRBpiJ9oCMQk1W-ngk3skJIy4y-j6VlWfEeCs874SUJV4gWMj-JrajISRXIDZUQQxS205dlbtFVL5SNgA9oMY2MGtaT8='
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 21:08:11"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIbqDC-kaxk7nafgf7fGoNjEngeeZTyM08hLNXco9-NWDRSDr_YfWSPJTG3Dkg0WPKDCghA8efZc0xygO6ywzfugXZxnY8PIXfLr5s6vu7wzcPnhgzFVmTXC1fuOzZvqLF8LW9sgfALRF7dLPMX3TS0A2yJumO5eKAoKgTAT3CN4X0='
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 21:08:12"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIcg2Avpcq-obmygFQjEg4v5U_5WzuneLiT4QcT_i40JCeqP2hiojcg4XySgMXsdcoB7Z7bfzxMuMCu4BnQrgwvCNhrqOj3jPki_oizYxYgl3sb1VnlfbcKaPV_VtrF8dC6ADHGxMw0p5e3WRGC-gxvacoIJC50Zku_1_msWqHMlS8='
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 21:08:13"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIdFT5ps8DuWEKjV0Jc9HVUq686dnNBLm1wAwVSzjvTFpFvKtHOt23rO-Fv8weBiVAKfMZcJxryNkxUV5vfUxaQYpQ7MnfakVEv5TzuO8oo5rI2wiljlR9UwFwmTt1TjdocBLkd1jfQuMNBjOEA0g1TUKsDnWIybk_wmpb-t6SLCPM='
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 21:08:14"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIeOkF3SLiRt3n1mefA4Uyij-dvM1JwoDgncdb8MJRyGYA8mnCkrSpBvW-3EF7ElFwqDeE8z17LiUIKqK53km31JiREMilEumJN3JexRxq_FooOgDboWfwaPR8O0YwIReHjrus19xtPEC6dJgzDvuBPt2Lkr9Mb-8Mx3isaKxcGeCw='
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 21:08:15"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIfYLpLDovKagDgUSVSIsfihZtqLFlcwRk0F6UdY15jszoLjDzjPATjBCJny3H78dqEKfPJLsIz9rpw7rQrKqFtvYOyqRLw8luij88nBkT5OkORcJ1Bi5rFMobWB-ICqa0LCYu28JiiXS9vhG6KGsAW2EtrjMHfHE5MjqoD2vv_VKc='
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 21:08:16"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIgMAqVGnjeuem_9jFC39N56g0V0A9a4QgeVEZuqbOd6j-_7nhfJDi855Ndxd-ulIfLW3KBrCcq5tAuLiQOaUZju5_BLlqIJR5vvtph382_m9aNTj0rm8IdDA1tQ9JqMgGghpRjPXla59i0xcETVadHvoeZi_IE-cmgMud36mssakU='
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 21:08:17"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIh3bMFV0WAh6rMXeqROxgJ8M8e7AcJEcFxcHJaz0dzNemVmAupL5zwdvBUTWPYpkQJpGNPIktWuBv4XaB-XJzLRQ-trxELDjClPu-hdq9AKFNiRX3ASTrPf6EFv8HeFB8xBLBt_f1GQLi3XJEZiXgIBlG3oHtBctVlkGUUX0moB1g='
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 21:08:18"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIi-QuCEpIaXLJA46lQ8JKpqR37I7uEMuDa82UDyy6IyB5fJ3sW9tClPtAv4iB7BsEXfiVMcWg3B56lEHpD4OFk05of-Xh2mmSQ8NnTO19oCxiozDcSI0TcmOmhl6gtx9Jo9U0URglma12CoFS4At1NgHCE1UHy1G2Hm-LlFSOVNLw='
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 21:08:19"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIjeCOEzst_dalywQveWIZid5n66T7wcs_J6pP1rim71aVeKE1GAom3Fo_w2BK7MzfeDAy0bRQzcQ3i1lFi5ToDKl4di3sIwBhLnT2_ck-iDoXm76FDtDc1TdQf_lySIB9maozSTe5jCWsWxnLlwlrDT7DSAu-HYGVAt9BLCjuFFAE='
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 21:08:20"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIkaW33rRwOVNiLuntitdQYKvq6x2j3dRJUROK9j2d48bJHb9Q1TlycAqY3V_MoFaNK47LmgMCU8YYzFjssTpfqAUHgnYw7dm4Tx1N0sTTpWPpxHDA3xSBNu90txLy7DyPNIPAQhJacRavTLjRXGZZDdDWvcj19tDwhdC3HvhnUCMs='
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 21:08:21"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIlotfXtt-onlWuD2Sh3BJkri7s5Db4gI9M_wBxR6YzqFQq05vuxFlPSMvrefrgY947nNILchJXr-QlfKM64LHa0bg3aZDNkvlzC17_K0ZVuXd6N72wgDlN71YG5rJFBxd-idomjTtg5e4S1IDZYyGYegAinYKr6TnrlPRXyxYf_qg='
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 21:08:22"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyImlU-OKxoTkYunF2kEk_l1Bte93aS60gGrqy6XCzY4gU6_awp1W5fcaEKeHXywqwIn60R7ys-L3nmiP-k3cc4lCba1reKhWuGzGRuBB4lApyWAfbaRScf2YA2hcXHdyDD9y-Rno_Fos2uuUOvJSZ0PPa4v-XGFpGXCE4c7m8hA0l8='
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 21:08:24"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyIomUbBu61h_wJMApk2vS-EDGjQEj-owufce-fNtNhEga8xijCZhfMwRV8myB4JCzFwtat7T26PjyOnardK0QO5FmQrGLZxfgVtbtNz-h9K_dKmahDfmgz2WEoBemel6MZNRvVTMnlDcZHJ8-JjeS2uDWe2LGWkU9Utm6vPC6LehU8='
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_publish_encrypted.py 
+Connected to broker.emqx.io
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 21:12:28"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMc-GOM9lU8xY4DDp0abFh3wofcvhhsOSrGZ86KNiLpqdoyWD1cYol4Y1vnFqQKoX5OKRc488Nf13tTFjqsEm237b4GFp9yGbluhd1KgCMJ273DcBXNwv9rP_Zy4hkcTJlPV1iN3KYnGw2KeTRLM59nhgGxVkTWoar-9QJVyDknanE='
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 21:12:29"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMdj4YqnadDNBIL8ulzVFztjyRskA72QRfSZlub1jo99dfs3gGvs8D5CZkpFVncJng2b7pe0TDxhmPk0G0XSH6D8YhhIKPcl67a8bL40vJDN0rjtQAAMcFGMcZp4xfwhBDoRjxJ-b5OrxxEQtqkFZvNkJWGuKu-4kfzgncm8Fjj7Xs='
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 21:12:30"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMeLmHX1ybth6389LlC7q0vyfJu_fbTzpjSSzppdirGV8TJC3qiMXyHiMJmQCSMdguba3eRRt23uFdjCXJP0XResqlhpz8YMVvYzK-z6yy6sf82E0l9DxaTXIguDpZHMqheE1ggpoXlbH--KGogTnc7sqDLxXPkGGaXyxaVdcdzO-4='
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 21:12:31"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMfTIIlxxCA0y6SYrCmGN8cy2Rnj8PwCJx91p06CytuG4Dr_oyJWK7HpkyNORxH_xTtIuNECaUhLJ6iTVgiLC8ks0ka4lnsRncu5463Q7Tl3Cf9aIBx478VjDV4BiK5_qU0jYayAcb1DzFlxY0mB06_7VQ0wZtF9Nlcm-6Be9GTPmM='
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 21:12:32"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMg4by1kZMagxExLtU9O46jnxe7Bw47sVqLVyP8rEEUmyClhRSqYb91tQU7WpC_sh0OwfIsTESRK8VWuL1CZvw-wBAsWJMwlUzQAEDwWa6qjM9ypMFsVpR-qNet1naZb2R1JslN7eKdm7qpCJ9e_CM110Xuvw3UfN_ZyoFEFBQkRos='
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 21:12:33"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMhsB0bny93F17vstHG7xJ2ZFq6bRUsdo-lG5-1VQR8VvhOTIxYeOOd68nRFtfjR30_8KbqYcQ2kAxu3obNj6oftoeJngBSRhH75tPad3DMppkLUUHHVqW5f5t-nOCLi0800FlB1K1w34CyYJbu9wnwNcQWnguRrI09zYKOAXlRo04='
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 21:12:34"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMixVnn6r4F8k-6-JLc2r8u6emEpZdshS-LyIYzmxgVQBKv9HYB9m-8RlfL9EkE4x3_z0I3MvlFjFfg-Y83UUvhwjod9gNRjnySywvLZtNvHgQlBt06pQsirFbZJF2Zj2-UHQFBFuHENpI16-_fhBqsIsJLm6VfEmmYMdmfTz9gBmo='
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 21:12:35"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMjfLtSdtxLfYj4E80xQYqKymaXG_Gl0YRH0TEpkWhaaBG9J-sVphLGTLY7DZzzUB1B2N2i0cngFzOZk23x1C6e7m3iUeqUWJtr4iYbS4VDbcPiWOgPtZjxDAf2EvzLATeX18V4HzDXllvGJqjxQwP4xiBII2TCr078yLEddHmsErg='
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 21:12:36"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMknov8yIc03IYPhhwFJIIOLDq9vtchxLG47vI0VAPLGjye5-D12sT1rTcxJWEAigG2C8cXVHFXcQ9UL3pY6Q9jIvfNoSl0iIAFuGoXE7DeQqxfJN1xyxD3G8la3tQxibVXO4S5A-jn_7zYnO_J9DIRlIQr9cHDPOQTTK5LDJaqZGc='
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 21:12:37"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMlGHovDBsCYUmT0CBg8DJRwOj4LQ5ILo0G3qWQB9rhlFfN51BRzajJ4StJELHq2pqorkXq041Vz3bJ1elKBxU-jIb8rdR1SEnaAG8IaAU7gNXf80wttGLwLCLBnNMkA3j2flnfbsYywYM74trAhU7zN_lZ0jIm7s5KrIKJGJM3MQI='
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 21:12:38"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMmc1YaF_ki15AEEtHyUjqQT4BCxZPuuCdSwtBZ9r80jejpeKGsazoNshnTjJRRs-LUsNuPtUoLXqiXeAb8G2ArKkRqCa4DQzEN1d6F88HoJ51evxnMUxTY02s0-MxDBuPyQtDpX3HJPdlBoS2ZzIR7O4UoUVtdpTf1C7cmKozNMxo='
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 21:12:39"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMn-RRgMon-wWVNiE3UtjM7Rm4hSMnCtuXq70AK0_iSBrx6HP59DZgI6may66Gu-PW27qfVyL1jK0C3TWS2bGvNZ52c9qVi9o3y_yv0fMyTD_qjr5gZmosazDE_w6CzPodElmv5KAW1iTWhsQzuEkXUFZWydL8AmEYsXqrp7lM4dlc='
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 21:12:40"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMoHjQ_-G6qAPyOP92BwvV3pse-uRtq4mkn4QBAyzeY4FmIjHRAdq1loAiE8pVztyA_uNWPoy_qaChg9rpHLUqgfMSTpq_w3N6C5p_mHtUh2BYTqEd9HqcrHiBAfonW2mzew-e3uGxTYS0cZyowFRVJGjFfervLp-L43EsQxbuzSBU='
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 21:12:41"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMpwaMCPQZuA5QOZyk75VDeBaEACNJ6coYprY-y8dFWfuZNodQQAApBe8KxxO_QjRciEHmlY_4LSPKG4qQq8FaIimrx9cFcp_zAKGkHTyFtX7nZWI0k-7CpI02i4ijoBOCCr22LMxK1q2qRfS_MlKrQbhBAb7KHidKlyNsgbgl7LHE='
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 21:12:42"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMqf3FHUI7LDLajyqyUYPHkQw_9H7YdhilCNaBCysKDREcCbO89mrjzfP9MTh1gikC5EwC7AgPjv4_Wytz3oS2ZQK7zhtQmaNvLhj38V4ql4YXbHoy02lQyDiGyB4NLsKSj7p82l7vYqm5aCZy4MYBlvsMqifZdpp1Q1Yi1y2OBkBM='
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 21:12:43"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMr7QwTOrHI2tM0muwZsaVLa8iDNiJYnJki8cmltAB1B8FxkxvrQ5KmLUJZMpGWw_8xEkFg7GZ0hDM91g9v9tX0yvhYTMYwnrLP5T2XPSVDQMYSCCFbVZ_RdkDmJw4lZRF0_AD2Gs0SZEVFIy-nNWAbfGJmXr1rHnKFGuOfI57Mcpk='
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 21:12:44"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMswSaJN4Y3ygiLTWDlCRAIULmEu7neOjnG4hXFrxL0IEvLurF9PfBntxQsUkRxMHFF6pFP5pllxFSE_YCkcrHhXwTkXd0fy_EXQFmr7-6sr1oqfesaJhAvBHxAP51RH8ELJ94gYNOrreeFMr-nMKKm8FDQhY3FC0pgZ1nKixOoQMQ='
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 21:12:45"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMtcMtonuTrqn6C3B-46zavOvGvrhzVvEe427qeAQQRGfV0FcpVBPHoHDMXgb0W6HrozhqU86NOEygtVGwyGpHo0klIqx8cJiHPjKtsILUmqCoHeExTORUVt_AlwT1WRxUarZnJsoeEYtTW0YYOl_YTe1aDTvgOrLS2l3BZUqHzImo='
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 21:12:46"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMuXWJLxJ0pNmSP1r2HpXSROhxJtSP1ykfjgL8M441cRatcF3N61mqOIvoRPGe4d-8lP9vVbPX_fYorUOcS-tFOzp67dI9nqSGniBcFbnJqmib5W8OPpCwQAo14IsaHP8E-7NqlwJyhAeliKlSroZheqqn7iEA3gSo1pQ7f6uQBV6M='
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 21:12:47"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMvHOrBQQhAUQyYLXnpV2F-RbeUDBMEdzqT81wmRq3wp01C6GImupqNUK71GS6YSzzZKrO8hxzoDpYSmqkuGc0Tc7gXwPmygVeStLqxZqjXEpCY2shpayiDpzLIuVC3O5cX0J9tdPfgTe-D20Pb1dprqNcLIH_Gf8Xk-AG4L9QfEqw='
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 21:12:48"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMwPCZLwefJWnFM1J6yr_PHas5ljtrCJDEd-WAWaLp9rubcsoVFhzWH2dd4rLGS88D3jJZIULQ05-usrxz69jhjO1SuXU82B80E-40Ac00xmoaE5Rr-gFZ1pNWPw5WYHPwJrtFMytYjUnRLIkATMI9Mu7kL581CkZqaN7xVNA-txIM='
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 21:12:49"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMxnp9yHkAuZcXYjiHAhAxsMYjYpjgGooU5YRPabYz-yyMBD5z2lJOiiMXPI5LvJMpYR2MIiKsE_Zob7ATO20B5x0u477b1NQagfZKalWf2mPiCOf9ALpNS06RYCfsV4kMIIgrOel_6HU_66Km3oRCPM6Dxw86X_u-y32kDcAhodZo='
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 21:12:50"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMykY2Z7AvnJADxxYM_kcFdDM-nG6WSjOPhMLHV4cquwlZJXlmtmNF-nCibY41jG4-MjWKJmACcasJe2rRFEH5hqTPQYXxK9LcGfQC_bBk0ignnvBpEaBKUF3ilapuR1uTd8zXiHxA1LAKJFipSDut8-btyR5DxsRB2CSXwmvIEe_o='
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 21:12:51"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyMzbFj_l8qWdawQ_9CJQjkwrcOlXlp-ykjvhNj90Ew7owVt9H7PLnrO_gpoV8Tw2qWwm2iVDZxbdOREGjXprxcy7R_NeHLRMVD4-4k3jTcIAMYyVcOSS1Zt2-hWy0YGIXAjl9kpnpk8lYiYTxkhX48UDnaKHsYg7TISAc9Lh1BAUZ8='
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 21:12:52"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM0YXxTKflmuMsYQ5SLjeERTLNkoV0lB3qpO77RlV4PFAIO9PyGfkZDNlp3Zcq1KYrlCHOOYiKQzZTEaozpOOvarVbobjhZIp--N12pN01eUTpqTC9xnaZ1LdIyhvLW_dk03xH39JCGu_-LYJs0nnqXvTx8jsrPbUUfNR90pXGwSP0='
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 21:12:53"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM1fsr1yeL5pYpCjBFXwL13v9ZHjCubfftJROJI4r-kw4snjZzlnpiYYatRLknZzg7OuppvLmcLU9F9Feih1-SVatub0cqmoIXfa8-ypbbSkk6hpC0sJnQXyktCnqVozJr5dAkGjZqKdJJdGZLtR7FfotJz-qgfXin8Y_oR8-peA8k='
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 21:12:54"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM2g19IPx9sN_xNuMOCXHk9koy5wJfHd58K9MnKpZ-3acFaYh0Zl28aYB8mey-Jwf5_xl0udA1SJ19HYL_cqPxtHJW7UxBaRvLTwxtDF2NIPGlYtNrn-BDe64BxGQ5xj-jW0gyPSe0FUORax2xCUCcgV2VAeojBnlNusWAcICuoL8M='
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 21:12:55"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM3BF6hfyUup4DRgpK9V1oCMAJMQjxRytSN-N5cX0rHWl2wgYYICfrHKze3p0vuXu7LkcEAxZRLMvi1HGXz1N0SaRzLMSc54q6-3gvszQCfQiCisBOm-m72u4lQt8U1iE9Yr4Me9taAKiTvxTEQEYYmzcsiachGZXk5glgGSVJfM3w='
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 21:12:56"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM4MyLQiXGgXKpgdka33KzM075z7NYGoUQkBx1O2JSkfz1eLgTMDaGlG2f5U947NJ5zjVnB2UD027yZU6ajuBtkA3EN7slN96X0dj-wgug78ay8BsiHS0ZXbrrAXrcAQylIlOT7I32-Njd3sKbKJ0aAtXktE-0K-jb1UQG1xUuquhA='
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 21:12:57"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM5JOMO8WPN1h2aY6Ulu3v2i4_W09o8_SVkHnOyE4J1f478KEV2IU7FgGF87g0BSyB3ettHjCnq96qAwp5uMPjEB_UWKGzgeJE77iCZVWQUQFpc4etkLXVBJTWe5dsVELIQYA-g9ZcKTn7c2xn7OvIzilcYdMlvedNTjaSlxpfiPVc='
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 21:12:59"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyM7qkXN5T_WrRxcSQG20IHn7f-u1oOla9ANXrJP8c0Sr7r9C3pUGMswkYQcinu87lqfC0yhRickU1WuEvW3GW0FDO_u-Iu4TNWrg3f22EOnAG10fw8a2no931RPLXZqJKDGLIX2szHB1bN27BkScvSBUUnIuomV36E2kj2r_z-dTR8='
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_publish_encrypted.py 
+Connected to test.mosquitto.org
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 21:13:59"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN3Ekl774DiwjEgZY9x1SKFvGz-MZPRqZcgruw79Sjib8lSrHWLBDz2RkhAJLSVqSEpozPhGns-6_f0LmlcM4nSPiXeGySz8Eg2Qb3WLSdCfSIa3OeMcSuU7UGGfQ88IvDdKzXv-eg17arxflfozASAfUCuBGs3sTzFvslN9Wi1sIQ='
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 21:14:00"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN4jrxjnu5ItPwca0x3XPazSn6KSY7VI593qf4frbD1SDF2HrrKwfNt8uMOPQG81o4dy0VlURsZy-n8beAxtK-fYtg2_tb1-WLna4ipu9JVwxRp9l7ub0bmPNlmSaahETAaCd4WYAWJuSDsdZgsId_NksTkWUUjGOwu0-uAh7I2sF0='
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 21:14:01"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN5dBR31COLfM32Bisc2BfoBJY86rd6fxCkgUQ53Kk4czDt2h-24pAlrjuUImkMhepShJ6nf3Q0D0m88LMB0OIaPksJnklkundOOrp7gL3ZlGNpTflvH_drjK3xovemSNRDlY6ZOtV0LzTW58N6MYkvFtZYoK2s9AXS19tayZaMALI='
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 21:14:02"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN6TSVC_D_8Q8PiueJuv3Kt9cxAwczTD4KPvR31UMzko2oXzJRxN8_rdsL9G_S1For4hsp3a6F4DwVBZ8LfDnQbxMiPrB49CaoKB8kjj5yt7i3W5IUCn8VhgTMLD2bIlsYvVZ4TZ1_d3FAHc0Zs-SkvB9VN59A7-smNaPf2l3qT6kk='
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 21:14:03"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN7OzsMWY7ASgYOBKLkBg96WQ-rhMlnEcHCdHsw74NLPgrA3g19iliPk8mWT34Oa_DB_W0NBW3tso57FteFZjXjxhfp1oaTXBGMZhFP3tFN0stWyjTCEOItZpvRCj1_L79tD87ZDa6QfWq5NWghA4FmXilQqqXj6ycpVWrhL6NHO4U='
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 21:14:04"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN8y7A15hhlph7AwJFVatcWH40INeB2tnhDCPGS422ezAqPHv_jhwNYgkm4ZBPan0OgP_32GG-d5IvPutUL8g85ClPLvrwsHNuZhQQxb7JWgtC3YpU1tQiEMpZAEl076r1zhYBM5Ia7xfwZ31asp6VQQuFs_Y-zc4tUuSK-40IUbHM='
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 21:14:05"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN9qmFnG4Hgpxg3kaoxeMrNbfnnte1UfW701g0jh9UckaYpfePkoYSy6fHp_exFk2SnhtB7sv8-OAPzJz3qYAYFpMCgIkUcz57kP10uaDzf0xGEyEfBZaaoeatV4N1SVHQvLQQ9XKiGIrM7tI-1iE82LDwE4qWV3lvOor0o0fDrZlk='
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 21:14:06"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN-WbEC1DMYRhIzs_F0m--wNkaEriPJpbHtg4A9ztKMHliMA-TBgS4Vqyrb7mnnfnOY9VAbyZDztlYkhxo48PBvWMpxMlHYz1MA1hiYuaEFlgYyc1xxF-yGN5w-0NODoU1G5iRIHOXntVlBivjfe_7IP8wjTV2P55MIHNK5QftNLNw='
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 21:14:07"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyN_3Km_WMjnWPU72JiQLtf8zxHKzQTV6FjEm-Lxo-N9VG0WKMRObFrkCD1UGaRIFzTUlpmUmVbaYwqu3n4JZUrFAIO2iDPDhRuLbjCBVeXAU4hUnJwc9Zmbe_fp92Ce8MYpOP2V42qd9Ju9xr6qqLWqd08M4vO_Yt15aaibDhvnmac='
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 21:14:08"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOA_5a06z9gw8yPgxUI-SEELu3cfodGq3woo28yezApkKI_W4793Io_97sAWto2Yuk2bPI65QiDBfIj6uxCK5wIdjzudqlPws7BhnAQIqq_jHBYGmEbB9k9MelIP9824uQ9lOPIpAMbcJJMAXbYnjsfcGZcMz-RtcFgz3kpNDyeXHg='
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 21:14:09"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOBBN0nmQI6wzXFeDP__Bo-M7KHjVPTAEs7n_8fP1XaOANBEKuVE02P0UkW49t-jjOxiWDtfRULVYqXj_TQhYFKLH4srjwlC4b7wqEtkf8go-HgNz05v0q-mtWannM-v2YyghExXvx3QbD0tjm1FhTpVHguPbNNjO_0JfhayYc4uWU='
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 21:14:10"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOCXjA6n3KHdqrCHzaiFRaZIjk_zCSwauXSMualD6OSZwj_6DUzVszm6K7m4cnUJwJkVqw0WewXBXVBPsV2Fc5KLFwnL2juxvM7wICJJiFf5aW5gX5vA4ljF--iVYClhOzf826BVUQia85nmgvfU8nATt5rFGIV_pATaLxx6VoiqPI='
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 21:14:11"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyODF8WhsO6CsoPvwvoYEi3asJJJxql5PyEINbaUwYn-xCA83zZnU89VTqMsWcceR1owx09JaWH_taQHhfeYDosJrhhjdLUifoHyIem4P9VcSJcwCkkf66MAjxobyHp2TaR2YvukQoR3TNStcx_NoTfjHQJvXSwHlyJK6qO7oNPy_hA='
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 21:14:12"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOEJdnPzMeplSmx6F-xRxei3mO6na99URcQCJBB-QhXqRBqqSKxuwFQiw5xHg0quaUMP4Kw3C0qw4LjE84W-enE2sWQUtHVgiGa6h1uAnjHPUrXMEZAv67u8J89cZcmsFj_NsvF4sLgouMmXwvlCf4uRN7aiBE7bKs_qnvUWjBA1Rc='
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 21:14:13"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOFPZXRdubfbvBAwrTZmItwKkPwwHlLFfLM0Xqp-Q64h8Icv7PPdCmZzqH08eUMkaJjwFBXLKchsDYIPv50YCt4aMZRfKbggf7W2bWxmNNPo_O72NoxykqrOzqml8pt9HqClukHT1qcfOlRGIen3IyQhYbgj6UdMLKAmwwZQzNV50E='
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 21:14:14"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOGTae51xmOtZSSA6h5VlMa4kqADnpHPitsHdSynAPKSgxBBKJHDhBF38fwS1sfMXKjq16FYGhmi27YEshUat9pX8wpOxvg8IKfLLJf-8CI7UgVLpz_IxRcXJl2yP55W_npboARMpJXCceQMyRzeisnGyir6g5RzDA3Uvsu0QD4Kiw='
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 21:14:15"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOHwG0Y9LalUfqQdgAad1T5Zsu28xTJWQEwPt-G2HD9LPumt-MtyzVQqEyYlGj0qcLDoYmw4VTg1p0XcjZBerNmo1CJ9QbaapIBc2nP8DZL9iayLQdrOfwJ7K21gTDR0awO5LSuAO0rch0-594IELNbeo7aSvVFcUO41NFj3r-D6dk='
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 21:14:16"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOIVDlw29Cl1iqBQ4As6J6DfCeDrI8YdGGB1GexBfs8p7JZkMmyWx_6eb2YBZmbxjzP45j5y95ANZkoJmhzB9NwrEpSin8WsOsAsyvDd-ShJvLFiGX4RkI2dSrB28mkuZd7IyDmUM8dTOa-q7G438xFnw2ej0W0xpDMljI58BE5e0c='
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 21:14:17"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOJqkwlEE3DmHcSr0EZ7fzpgCmVSqQfcMO6vErJQNn6F6NjZPyuzLtgyxdochInr6s-YhQ7hd72nmzdelPmT0gHsoYc461a3MEX0T0LRApObiLVzHTb25yjfmCjkeqDlOOJq9Gzv5O8B4TWLRr-L7RgfD_ZoKSeIsxim4m4jw3vwjU='
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 21:14:18"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOKq9j4obPwvYxjTofhh5l_3Oo5gjgs9yYO3_s6jNhAMpzt4bq3kC16LUSu_-W_fKk3-w2duOIKWTvry5tac-d_vhUmfXJ5MsLBtcCIT78zGSFlSN7EwpLwAT0RMgVDGZit7XI8iwe1ZGahdioU-Cavo-jLwMSiOKC7hUXryitS0wI='
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 21:14:19"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOLJCLFlViEOIxwWWp3R5tIgdH8DziQGiZYIbj61RFD8Hz8rObB4_uqMPCPiX8GrJqawkPxfG3dASkRy39YhBNSYXx3QpnQquVEmDoBEJ953RAXpYvQVs30wjWyQ5mq2Y-69jlQ6cf3qCgD99AFCfBqwTfkAmU19cF-8L1MBi1V-4k='
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 21:14:20"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOMRp4zyC4vpLq7cDOeXFrCoV-ctKyHxEVj8zvNCAxT6T2X9LOzz8MD0MdCwP-Mv--CKF5qTPMLYYdMQ1a9w0cv3UzVJPg0KjLWHVSbGRBMvCPggist_5ULJhMn8LdPDU9DCyu-Ef4hP6-wTCCUGGSSN0JHbvoQvizIJ_QOfQvpBRc='
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 21:14:21"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyONq7NVApxZ16NBcL0xm6ruKWcC_v2qZ4G0KP8uwWwjZcu5wvnTNvh2z1JIltTmGwowAElJFjLqGjZ9UKpPCqCbMs2PsbmMXjchuAeBAv41zF9XuiPcfCvIG4gTasp-RSgLCRwyfsy8r7Nt2SeNzonDPp8SHO_0vsV7YlxZDWCW_Ic='
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 21:14:22"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOOf4psM0SjGJBLkWnR1LeTQPXI3k88d94MEzHwQGnkA0gzhiYyNCOd0YErQ6L77c11-FORuLjw-ZvZTcn-bOrArGVCIcNznfEhAmZ3r_AHUw_apITkp_km-6qP8pfnCBEXhtR9ErL-l8HsU16PhGaJQeua6Z4qcxzd_rbWXccfOXo='
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 21:14:23"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOPxftjdFYOuhLRtMFPYKnlaknMif_Hj5zX4ssxXY1yE8bmZ9sVv9iqtztyidDmJLriXs9DqhoS42gQceIswahi6z7GgY4TewwlpAp25KhWXVN2SxDwa04uMgiHI7LC478kTTa1RtM4yYvr2CIlDcsNufMMWrNHySebKhNyONQcZrI='
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 21:14:24"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOQpz0nok-c80sSUCk0kPlgnROD_ELdS08AnWAlwTIGzJLHBlIld2lw6GSuFfLAUz1_yQrM69y0w-CRWuoUWvMW0TAhTMZOX4Ao45CHGXLS7NiPEWc6lKyxAXvNh3SA7P9cDDtWG5FAPEx9O9NsmyCNHb6ws3AW5xdNXiIrGSFBd7g='
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 21:14:25"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyORtGvODrYTknkB8n4oKZXO6fLOXX4fNjKZbWFpz2UdRKNL9Obbnreaq-cCvXRMi9LhbSpA2UCVZTi2K68Wq06eaDNfcZvLwe95eo_Cbs3rmhv7t2uysY9a0UVldzFOpGdZ9oQvU68EL084Cnhn8FpSk-oYTVydjDfQjVa0WYhbxeQ='
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 21:14:26"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOSpYhV-j4R64mdtFuTPCd1bZehkdVT_BWj_6r8CkNu3L7bklS21rz0Id2clL6PR9n47sVqYntT4HfNiqnSng1v4iIJ_2hbIyWKGAbO6p8o7VKdksEzJ8vfrzvT-W9LKrCbawdw3psQcW9EE2gu2ogJvyfHFFZ8DIhVgb658YHU88A='
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 21:14:27"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOTHCQS-UrfgwiD1OyB67kakRIaCdhHJLBdZeGEGFF-eQ_ROhT4X8ruL1mNZLJvhPYkpe_8cGF1Fq43mOei7lMl9Bnq8g3ingE5_p6uqxe5vYbQNa5z2H2T4nCRPIC7tMc4OyEX_UlL_3fiMdEkZf_8zcA-Q-7BVIFDUikAk5bgSoU='
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 21:14:28"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOUAA1MApgV8SwAddfPRaOcSWxTQSNc1vMof1jcCJ-GvR8v3zPgU6KDpbwRIm8c3679BqITYVyG-lqv_oHLwmwXNPg-GkHZbLzyHcxaudpqbf7p6-9egWol8w-vhRNw_VUEG2W9jhJLOCYLGDxrWL59mk7pe7gbTXfofmfpDRrtncg='
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 21:14:30"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyOWf2EIB_eglDpOrexdQLyHb9u5_-263Cp7clORgiv8rZVLkMcSjj9P-Jmr-QdYaF05tW4uqk_K7raFJAWWQ5K3HpalN7c9FMVuKVbwuTWNHmg1fCTtW209TbD5DQLZr0C9tdGOi-fowNn1ZqbgT58rm1sDSOJ9kQCOYE4r-ptcrwk='
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ python3 jaa369-d2p2_publish_encrypted.py 
+Connected to mqtt.eclipseprojects.io
+Published 0 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 0", "timestamp": "2024-01-25 21:15:05"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO574H-4pdCzN9A8XL3CLYYM--1auBO4Uk34jQazYAonW3HzHfune68_jf1EYTfJmB7EchGYx9-scaaNdwR06UbdSpaq9zuNMTmJQnBvyX64WUttHjqbQmMg1TJGfDLBb3LY7ERfMVx_nXVgxnJ4hlGSdgTut3cFywJLeU_oUtrJkY='
+Published 1 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 1", "timestamp": "2024-01-25 21:15:06"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO68uA25BQHlDeFSTqT3qUt5ktjyOTnY7nGkmYYESkzVeeIr8O5S0naYUqMOl-pNu_saqzEFYLuugkdkyq52VdWrnhL76xbEkpdmKLa6S21PJaD_Ayq5YDQb-GqazDf0aegRVDrnm5C9NQ2ubje0yyiAHkyc6i6rAyVtyk9Z9AHKXw='
+Published 2 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 2", "timestamp": "2024-01-25 21:15:07"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO7th7gx3BeB9SELMlqkWDm-FgarTO0eh8YwnLc0rdCbi99VFog1VFcGqMdLfph6yYnunnZGI64oZZ6Lg2lwDNsh1UaOcBtfj4SXvaMJYFgS-KYRakWlW7WPIz-9Hdqzls5PVz2HRX4r5R2_Y3BHf_SviwuBxAVxgjyZImHf0-9Gm0='
+Published 3 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 3", "timestamp": "2024-01-25 21:15:08"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO87HCCKxcYcfwVjBO_AwSvwiq9IIT_UGIcwiBx34wfnvsdcWzdMlZCV0NLS5_oNzQF7QTi5GIZchlTSaUoh7o3OR7q5lvxYchKmBOKOHlk47jNfgwvh4MDApQMtBwOKr8NT0GN5JiiPKo0AsYf8R2FYl0wdz89l2yU58hcRJ2DkYk='
+Published 4 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 4", "timestamp": "2024-01-25 21:15:09"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO9mjd-PiIFNutJ8kY_xpiNpPZWiYA67dGjxEiMp1i2iV5vvc3pRapkWyedoN0fQUlp7esUs_w4uzOZW6lG6RclxqWvRoNV6O-l2b0qZNfvr7vJXQwxftIobZeRZU9Izid9b6WK3_ow_X1cdodzvXDriJsps6ja1z_zPoJkQmkp2uQ='
+Published 5 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 5", "timestamp": "2024-01-25 21:15:10"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO-4UYdV5U__wmRC8SZTlur0mD0HOVA64nxYrPzqoN9o2SqTxMQo58xyOaLg5m7PAUCFiSYWp90U1h2FqxYrssFLcY02PQMJBjRqwIEMs41Esygi6N_8YM_f3rz4_McicisJPtbt9Uv2HUmV4krekipQhCjet8ENNuFvFU_6F38M1Y='
+Published 6 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 6", "timestamp": "2024-01-25 21:15:11"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyO_VOPCuOyIaqxP7A6nd-E0QcXhnOODccj0dfnrmePwonMIkkjMdGkbeEcEwL_RyhYsb8iSxrBExloEa8k5y3Gpj8ZiCX9khK3hDG9hVOxnuvunh3BXyb8lwWOne1tfF-3mMhjp1wh2sw9IWXoT6rx6Sn-rSOefemjFwf1o-PpDUHs='
+Published 7 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 7", "timestamp": "2024-01-25 21:15:12"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPAAQeOeMjFYwPXJCj2jL12rrJo2QAmLVq1k8eJqQzwvNx4-H8YA8MyNa13tVoz1NLZgXG6ORLsfpBQTaHYSC8Za-WoC4CT5uWXhsWTG6Nhsq8HY1FkqPJbc58En5jz7jEThKeAF7csEBZ77hOqExAWWcRYmfYHZ8Ghm0r8uFrlrak='
+Published 8 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 8", "timestamp": "2024-01-25 21:15:13"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPBEs-XRqg6YlhIq73WPHg9co_dijIbgUz_OmybBQiVUBQwaOqP3byxKQfyO3m7f-S32iOnmDZrTV5VlZckQxCDrLwE8_WmHD9zvw8ydiqIXpw-5Iw5iCAWUBlLcihmqrLvpJXbaNv4ZexomuALZwxet05fGU-bzlrFEa_fyJ7PF-A='
+Published 9 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 9", "timestamp": "2024-01-25 21:15:14"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPCJlDbgws_hfyEps6Hz6RY1t1pSAZwzzM5S6AIbn4hphwkeGZfZ1-HDZZwYNs1vq1Wad3NCr2SZHniW4m1IsoWbA_lIKvYnio_JTk001YG6B_9km2brQZVbR0BlLkPjFB-KaomhW_E4YsGcWwyJIQtMDcmaB7h7wv4Ce_xpjof2rw='
+Published 10 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 10", "timestamp": "2024-01-25 21:15:15"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPDHGwk9P8qRNRB_S9jU0-it44MgfWacTafGB8BiQImD9BsyrY9eGJy-drQBfxFMJqHMZRUiivnd5q3LoUsOQ98zBijl3wO7ksiN3k4zavIxQa4SyX28-8-ZO0U9RomFXtzpgbrKXMuZSYEq0bgzuxUhZ0bsiPiXmu0rVtpGWqX8So='
+Published 11 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 11", "timestamp": "2024-01-25 21:15:16"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPEc62iqC2uzElDi6xBotCdg5jbgQPJEvL_qw8lpOEZzKvp6ACothkENdeFgBQpYpI7n-3XdbMIfKRFF3Jg2ofhzl1iOheqJIB6vqWiSwjf34rzPmQ-hGAT9YE-1h6RpHyg9iTRN5cg9TCUu2Egzf4UHWcc2ZTmsmo_37X0xHV52wQ='
+Published 12 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 12", "timestamp": "2024-01-25 21:15:17"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPFGt3hCfoKdcEezYtojWEy3OmnuDBbcvgiBnY90cqvWrGulxUpmUAxH0cwA1UxrVFxoqTNm5en_C2BVnYpknQ-fhI6ZYLUjs5d55MJzZVg4r6lR-DZZ1rVh6Kj394-8RRri0La4KMFZyfUoOhyrNd2-CFTAp4d8YMyPMT150RpUmQ='
+Published 13 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 13", "timestamp": "2024-01-25 21:15:18"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPGATnk_JMW5wmDIz9F7foeCSWW3TXMFfC8UiZvw7sZbcS8ImDdEItv4FzPVJJ2QiJrRGdRncY5uCcAaY3q4fu6jCRnkWQOpQhkZexw1Duzt_XQINRiew2x0K8IS25Bi2rDfR9P_ALOPAKeCpNnZwX__sMK81Z2Jificnoy8Ezxx_Y='
+Published 14 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 14", "timestamp": "2024-01-25 21:15:19"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPHq_RfK2nT4VAsa7g-m02YqomtdMLWeLopstrPdVVb8p6FpdkX12dzu1JPdO9vS4oSUl--U7MssiO2EfWzZhv-xKa7xYuVU8yhNFcTJX-v_FH-UbgqyLLe4dpy4ejmEp4rIuMKckW-Bz9Jk57pG32zkNiE_tompMGXQpdiJhR8mFg='
+Published 15 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 15", "timestamp": "2024-01-25 21:15:20"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPIl1sM55VxD3N-Dt51NwmRtD0IxU6HSqg6QBYjQhxkpMX61EoaKraYkfDLN1UpDnnnAVgo0LClaQvaNI3k8mhGl-awyOCwwF5UpPtkYYZFIwNU18BYqyPkFm8cO6_n36BX4j_0WAIU1nUAeWQxg_BNfxqb6FNutm2_jq7RRzKa27c='
+Published 16 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 16", "timestamp": "2024-01-25 21:15:21"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPJL-AJEYeP-NKWZXaDubUzD5xzLa47qa72cYv55haYqvcun5CsGefvwPmwflnREQWV2n5sdoAVxxbg3G2-93yMvuEgHf_tG19hiiPTUlxuXIDI3OKaDzTaaJ-AQ3ZeXTZw2EWwhil7SMnzEoh3sjOijV03zWEtK2boKyxZ7EpBRDc='
+Published 17 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 17", "timestamp": "2024-01-25 21:15:22"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPK3z6hug60e_W_jzgk0xeZNW_ZJGcR92n4ILfI9i7jj6kJLQ1a23UY9LESpgieNeY8iYRJp_9BzeYt79osjdHa-aEtafsssyQ7bDiEHf404CChEZcuC_1GZd4BYzqqFSGVOCD7ZoISAJanL7HCCFUCEJdpEa6EzPtFPWTjsm7DkZI='
+Published 18 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 18", "timestamp": "2024-01-25 21:15:23"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPLDy04Y98ExNR0F0joG3T5Ji33iWxvPXqVKcrNqOgu2qKTtD__6wPTVwxMVf1VM5mKzP4sdwhVD1bBGGWDfeHGPgWwJghPNtnPdDyhfjbXLitSvU15mZYo42fle00osrw6M3knO7xJYWYfcclll3yhhbfWqwwnyljPp9inBc4ZE1Q='
+Published 19 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 19", "timestamp": "2024-01-25 21:15:24"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPMFwILrWe-aAvt9Jv4lFUeN8eippGG-7SSr1NuPgQGnwCizsZXU_MkcCjJhScjDRLNWZenHaay1yZ-BS2BRrzx0hunliH3r_Vwf4ca7a1CqBXjTt728q0IZ7O5kqItqDrT1-6THE2tO6dkbA8_2AaLn7MzhFA5c06hzR8Q-QaegMQ='
+Published 20 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 20", "timestamp": "2024-01-25 21:15:25"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPN76DPXb09NQLduvm4A5-zRqEVHOV59rVnLbW92ughKjtGYJoty0qt55lwQSTQoNNHHqG8he7x968MY2lyHtG-T6Pj9MxkuKWOQY0R0p2-RUPHBeOUBPt7v-PMNUiopIfstbjVZ6PYF0I7-pBrPdVk5X6KD2H7NevTpWDYiPBhxR0='
+Published 21 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 21", "timestamp": "2024-01-25 21:15:26"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPO9tNnqyhbWZGn4BGgDFMKInt5wnMahbCQWaVPruT7WwhxDNfbQ52og5OtSbwins786Jf4yOe_G2G_4AntL2ZcEiI0zSZnqAAFyF4hqT4wENGNZgv0axNZaOVZNcFYKUpP3y-0etimL0d1X0J5JY4V1o-oahSptOUXJh_bIV5IYaM='
+Published 22 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 22", "timestamp": "2024-01-25 21:15:27"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPPGz8k8vPUPlhHkBCTUTnl5Lknz4-fWwsOiHEmGNb_DWiyNVsCLgVgo7eyw1KYDelhCkFBG1KRMpg-uVdft7qbMMjSxeZ3x3SF_hrjUCD5cZ1_Wuo_6s_X8cYVSkYBUul14WpZ6Neb7drTK1kQAv0ifxMkzwXKYJuq_jUY1VVljv8='
+Published 23 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 23", "timestamp": "2024-01-25 21:15:29"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPRPbOf1KoDCE0Wnivdv33limQgUoF9sQU0EEMOsL2Spljnud8R3oQZ1Lx9mh6SBqnzcQkqz7uVKktjS79gsUr5-cquK6LTZUeqMurodxKc3RzWkaDeueL2EqAla4bl26PAOiYyE7wlMlzayc-3p2gAXWSuceuMsslXfH3-KinYTeU='
+Published 24 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 24", "timestamp": "2024-01-25 21:15:30"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPSA-ihscMGu3mgvIdmGQBWPy6xr1WHAA7MVh1QKmhujCF7Cdf16vnGSSK2e1piQrV8e7JIewdtGkRON_nJX4KDH9lh8vY1cwNo7G-MLfZCB0Z9n20Cs4OqkpoI01Zxhlb-h6N1r4b703njtFOwauUJUhwEwP5Fk60OiXA7_kcgsEo='
+Published 25 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 25", "timestamp": "2024-01-25 21:15:31"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPTly9F55PFGitMEZyV7T5aoaYYpezMk2dAXhuv8B8NhWCJLV5FXx47jQYeTRYdXhIRekvg3ZVIUMNiWMaxEkKx8lr5oNdh-AipGaELbSRUPZlgD59gHnQY_3v2Fq0TBlnjP6KXMbA65HBiF4OMGFEND0wgvQGKKnLu-aXNEzMimrw='
+Published 26 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 26", "timestamp": "2024-01-25 21:15:32"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPUsffN2URNapaKAode8ytugP4gnoSQ3_v414SLgPMdntpdsNeKqKV-LfkbTdNiwXkYLUZ45FjQv5wtmWFQXGB2YqY1MD5FvGs5GLYSt9hdZkNQzltJuIuWX-iHzA-xgmBXthFu8cK_twN4eP-WasXFQqeG2TFwGsh4a0vdR8Ih3ws='
+Published 27 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 27", "timestamp": "2024-01-25 21:15:33"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPVL5jLhx8iAARVQvKgucsO_oBsqFqMMwIqlJe8wkSeOsXrKPj6iOh_Iru54E7iha1IptVIWAxGW6saQb1x9ZwLVAcjRPOWdBXPYB4y2TTLYUdSq1TjAmFdMEi2AOip0hcPCawDR8hsCLdjlgtc2c7tU6UbXAjPtQtC7Di8FvdLjH0='
+Published 28 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 28", "timestamp": "2024-01-25 21:15:34"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPWd33WkX9M3nIIP7BpkecBXgl29Au1NpYrCGLaANcVuQCExVbBc7w98JCneTI6Pm_099FdeVADi6yUc3-Pr2Az8TaKPI6ET6KWkEyu5aLr1PhFdfO9fRlcPFb9HjGuS2lqIJ8j1uT9F3kW5J8VGdK6eE0dJYpaY1gNlHICMk1PcBM='
+Published 29 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 29", "timestamp": "2024-01-25 21:15:35"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPXxhvugJjlh6J3rsteGgVic8eR-_fvCRGBJCncHF77cH4uXjnDlzNhO8CQfD3k8eF0icLqd7HgVt2CBDMoTtFOdcEjcsJEfSWYuR-dGCiwvG47qBjx1ctAyGKlrikjGKTV2hCTETZw5qeXVNHMN5BE_qXE51QlTYuc8KzyQyrf5ak='
+Published 30 packets to topic `jaa369_publish`
+Send `{"message": "Hello, World! 30", "timestamp": "2024-01-25 21:15:37"}` to topic `jaa369_publish`
+Encrypted message: b'gAAAAABlsyPZu_gWJbVFB-PTJY2cERmLWxVmFzw2-KsTorPPMtbi3eKGkRfFLvKgqQyXmxGFfmvQpj3_YGOWzp5TUAzoVSXCj98lnWWcz75fw-WFtXk3B-R0ARaH1PYm6VP5DY5gM_a19y4re-MRS4TiSx8K8_2DW7LhzOzcFmp8bPiVS-0JGrE='
+pi@ece-rpi4-15:~/jaa369/RaspberryPlayground/Deliverable2 $ 
