@@ -72,7 +72,7 @@ def on_message(client, userdata, message):
     elif (msg == "readSen"):
         print("Reading from the sensor..")
         temp = readSensor()
-        print("Temperature read:", round(temp, 2), "C")
+        print("Voice value is: ", temp)
 
 # Program Start
 if __name__ == '__main__':
