@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic;
 import sys;
 import os;
+import paho.mqtt.client as mqtt;
 
 # Importing the required classes
 class ParkingLotApp(QtWidgets.QMainWindow):
@@ -23,6 +24,18 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         
         # TODO: Make a method to update sensor display
         # self.updateSensorDisplay()
+
+        def setupMQTT(self):
+            self.broker = "test.mosquitto.org"
+            self.client = mqtt.Client("jaa369_d3")
+            self.client.on_connect = self.on_connect
+            self.client.on_message = self.on_message
+            self.client.connect(self.broker, keepalive=60)
+            self.client.loop_start()
+        
+        def onConnect(self, client, userdata, flags, rc):
+            print(f"Connected with result code {rc}")
+            self.client.subscribe("parking/commands/")
         
         def displayMessage(self):
             # Get the message from the input field and do something with it
