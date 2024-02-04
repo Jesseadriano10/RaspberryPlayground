@@ -36,6 +36,10 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         def onConnect(self, client, userdata, flags, rc):
             print(f"Connected with result code {rc}")
             self.client.subscribe("parking/commands/")
+            
+        def on_message(self, client, userdata, msg):
+            # Parse the json payload and do something with it
+
         
         def displayMessage(self):
             # Get the message from the input field and do something with it
