@@ -8,7 +8,6 @@ import sys
 import paho.mqtt.client as mqtt
 import json
 from typing import List, Tuple
-from tabulate import tabulate
 import threading
 import logging
 class ADCSensor:
@@ -146,6 +145,11 @@ class EdgeNode:
         self.RGB_BLUE: int = light_pins[2]
         self.command = None
 
+        # Threads
+        # Two threads to run the server and client side of the application
+        self.server_thread = threading.Thread(target=self.serverSide)
+        self.client_thread = threading.Thread(target=self.clientSide)
+
     def handle_new_command(self, new_command: str) -> None:
         with self.command_lock:
             self.command = new_command
@@ -167,6 +171,7 @@ class EdgeNode:
                 elif spot == '6':
                     logging.info("Exiting App: User pressed q...")
                     sys.exit(0)
+                self.server_thread.join()          
             except ValueError:
                 logging.error("Invalid input")
                 continue
@@ -187,16 +192,14 @@ class EdgeNode:
                 elif self.command == "WARN OFF":
                     self.lights.off(self.RGB_RED)
                 self.command = None
+            self.client_thread.join()
             time.sleep(1)
 
         
     def run(self) -> None:
         self.mqtt_client.start()
-        # Two threads to run the server and client side of the application
-        server_thread = threading.Thread(target=self.serverSide)
-        client_thread = threading.Thread(target=self.clientSide)
-        server_thread.start()
-        client_thread.start()
+        self.server_thread.start()
+        self.client_thread.start()
         try:
             while self.running:
                 # Main thread can continue to run or wait
