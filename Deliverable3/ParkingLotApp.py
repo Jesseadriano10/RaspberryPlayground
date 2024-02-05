@@ -26,6 +26,8 @@ class DisplayBoardContainer:
 
 # Importing the required classes
 class ParkingLotApp(QtWidgets.QMainWindow):
+    displayMessageReceived = pyqtSignal(str) # Signal for when a message is received
+    systemMessageReceived = pyqtSignal(str) # Signal for when a system message is received
     def __init__(self):
         super(ParkingLotApp, self).__init__()
         uic.loadUi('parking_lot.ui', self)
@@ -44,6 +46,8 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         self.sendMessageButton.clicked.connect(self.sendMessage)
         self.warningLightOnButton.clicked.connect(self.turnWarningLightOn)
         self.warningLightOffButton.clicked.connect(self.turnWarningLightOff)
+
+        self.displayMessageReceived.connect(self.updateDisplayBoard)
 
         # data variables
         self.occupiedSlots = 0
@@ -68,7 +72,9 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         self.client.subscribe("jaa369/parking/system/")
         self.client.subscribe("jaa369/parking/displayBoard/")
                 
-    def updateDisplayBoard(self):
+    def updateDisplayBoard(self, message):
+        self.displayBoardContainer.addMessage(message)
+        # Clear the display board and update it with the new messages
         messages = self.displayBoardContainer.getMessages()
         timestamps = self.displayBoardContainer.getTimestamps()
         self.displayBoard.clear()
@@ -79,8 +85,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         # Parse the json payload and do something with it
         payload = json.loads(msg.payload)
         if msg.topic == "jaa369/parking/displayBoard/":
-            self.displayBoardContainer.addMessage(payload["message"])
-            self.updateDisplayBoard()
+            self.displayMessageReceived.emit(payload["message"])
         elif msg.topic == "jaa369/parking/system/": 
             """
             Get the payload containing
