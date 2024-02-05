@@ -8,8 +8,9 @@ import sys
 import paho.mqtt.client as mqtt
 import json
 from typing import List, Tuple
-import PCF8591 as ADC
 from tabulate import tabulate
+import threading
+import logging
 class ADCSensor:
     """
     Sensor class
@@ -53,7 +54,7 @@ class WarningLight:
             GPIO.output(pin, GPIO.HIGH)
     
     # Flash the warning light
-    def flash(pin: int) -> None:
+    def flash(self,pin: int) -> None:
         GPIO.output(pin, GPIO.LOW)
         time.sleep(0.5)
         GPIO.output(pin, GPIO.HIGH)
@@ -64,29 +65,33 @@ class MQTTClient:
         self.broker_name: str = broker_name
         self.client = mqtt.Client("jaa369_d3")
         self.client.on_connect = self.on_connect
+        self.client.on_message = self.on_message
         self.client.connect(self.broker_name, keepalive=60)
+
     
     def on_connect(self, client: mqtt.Client, userdata: object, flags: dict, rc: int) -> None:
-        print(f"Connected with result code {rc}")
+        logging.info(f"Connected with result code {rc}")
+        
         self.client.subscribe("parking/displayBoard/")
         self.client.subscribe("parking/system/")
     
     def on_message(self, client: mqtt.Client, userdata: object, msg: mqtt.MQTTMessage) -> None:
         # Handle incoming MQTT messages and act on them if needed
         # On message received, handle displayBoard content to console
-        print(f"Received `{msg.payload}` from topic `{msg.topic}`")
+        logging.info(f"Received `{msg.payload}` from topic `{msg.topic}`")
+        payload = json.loads(msg.payload)
         if msg.topic == "parking/displayBoard/":
-            print(self.format_displayBoard(json.loads(msg.payload)))
+            print(self.format_displayBoard(payload))
         elif msg.topic == "parking/system/":
             # Decode contents of the message and send to the console
             # and update command var
             global command
-            command = json.loads(msg.payload)
-            print(f"Received `{command}` from topic `{msg.topic}`")
+            command = payload["command"]
+
             
             
     
-    def format_displayBoard(self, payload: json) -> str:
+    def format_displayBoard(self, payload: dict) -> str:
         # Format the displayBoard message
         headers = ["Message", "Timestamp"]
         data = [payload["message"], payload["timestamp"]]
@@ -100,7 +105,7 @@ class MQTTClient:
         
     def publish(self, topic: str, payload: json) -> None:
         self.client.publish(topic, payload, qos=0, retain=False)
-        print(f"Published `{payload}` to topic `{topic}`")
+        logging.info(f"Published `{payload}` to topic `{topic}`")
         
 
 class ParkingSpot:
@@ -110,9 +115,9 @@ class ParkingSpot:
         
     def update(self, spot: int ) -> None:
         if (spot < 0 or spot > 4):
-            raise ValueError("Invalid spot number")
+            logging.error("Invalid spot number")
         elif self.spots[spot] == 1:
-            print(f"Spot {spot} is already occupied")
+            logging.info(f"Spot {spot} is already occupied")
         self.spots[spot] = 1
         self.occupied = sum(self.spots)
     
@@ -137,22 +142,26 @@ class EdgeNode:
         self.RGB_BLUE: int = light_pins[2]
         global command
         command: str = ""
+        self.running = True # Control execution of threads
 
 
     def serverSide(self) -> None:
-        if self.parkingSpot.isFull():
-            print("Parking lot is full")
-        else:
+        while self.running:
+            if self.parkingSpot.isFull():
+                logging.warning("Parking lot is full")
             spot = self.getInput()
             if spot >= 0 and spot <= 4:
                 self.parkingSpot.update(spot)
+                logging.info(f"Parking in spot {spot}")
                 self.readSensorAndPublish()
+                logging.info(f"Sensor value: {self.dataSensor.read()}")
             elif spot == 'c':
                 spot = int(input("Enter the spot to clear: "))
                 self.parkingSpot.clear(spot)
             elif spot == 'q':
-                print("Exiting app")
+                logging.info("Exiting App: User pressed q...")
                 sys.exit(0)
+            time.sleep(1)
     """
     Client side of the application
     Deals with displaying contents of the MQTT messages from the 
@@ -160,23 +169,43 @@ class EdgeNode:
     """
     def clientSide(self) -> None:
         global command
-        if command == "WARN ON":
-            self.lights.flash(self.RGB_RED)
-        elif command == "WARN OFF":
-            self.lights.off(self.RGB_RED)
-        
+        while self.running:
+            if command == "WARN ON":
+                self.lights.flash(self.RGB_RED)
+            elif command == "WARN OFF":
+                self.lights.off(self.RGB_RED)
+            else:
+                command = ""
+        time.sleep(1)
 
         
     def run(self) -> None:
         self.mqtt_client.start()
+        # Two threads to run the server and client side of the application
+        server_thread = threading.Thread(target=self.serverSide)
+        client_thread = threading.Thread(target=self.clientSide)
+        server_thread.start()
+        client_thread.start()
         try:
-            while True:
-                self.serverSide()
+            while self.running:
+                # Main thread can continue to run or wait
+                # for other threads to finish
                 time.sleep(1)
+
         except KeyboardInterrupt:
-            print("Keyboard interrupt detected. Exiting App...")
+            logging.info("Keyboard interrupt detected. Exiting App...")
+            self.running = False # Stop the threads
+            GPIO.cleanup()
+            sys.exit(0)
         finally:
+            server_thread.join()
+            client_thread.join()
             self.mqtt_client.stop()
+            logging.info("Exiting App...")
+            GPIO.cleanup()
+
+            sys.exit(0)
+
     
     def getInput(self) -> int:
         # Get the input from the user
@@ -210,6 +239,7 @@ if __name__ == "__main__":
     light_pins: Tuple[int] = (17, 18, 27) # Red, Green, Blue
     adcAddr = 0x48
     broker = sys.argv[1]
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
     edgeNode = EdgeNode(light_pins, adcAddr, broker)
     edgeNode.run()
     GPIO.cleanup()
