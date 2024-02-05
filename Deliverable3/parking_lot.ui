@@ -321,7 +321,7 @@ color: rgb(0, 0, 0);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    color: #333;
+    color: #000;
     border: 2px solid #555;
     border-radius: 15px;
     border-style: outset;
@@ -330,37 +330,32 @@ color: rgb(0, 0, 0);</string>
     font-size: 14px;
     min-width: 40px;
     min-height: 40px;
-}
-
-/* Default look for the button */
-QPushButton.parkingIndicator {
-    background: #f0f0f0;
+    background: #00ff00;  /* Default background */
 }
 
 /* Look for the button when a parking spot is available */
-QPushButton.parkingIndicator[status=&quot;available&quot;] {
+QPushButton[status=&quot;available&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #8fff9b, stop: 1 #008040
-        );
+    );
 }
 
 /* Look for the button when a parking spot is occupied */
-QPushButton.parkingIndicator[status=&quot;occupied&quot;] {
+QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
-        );
+    );
 }
 
-QPushButton.parkingIndicator:hover {
+QPushButton:hover {
     border-color: #666;
 }
 
-QPushButton.parkingIndicator:pressed {
+QPushButton:pressed {
     border-style: inset;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>SPOT 4</string>
@@ -408,7 +403,7 @@ QPushButton.parkingIndicator:pressed {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    color: #333;
+    color: #000;
     border: 2px solid #555;
     border-radius: 15px;
     border-style: outset;
@@ -417,37 +412,32 @@ QPushButton.parkingIndicator:pressed {
     font-size: 14px;
     min-width: 40px;
     min-height: 40px;
-}
-
-/* Default look for the button */
-QPushButton.parkingIndicator {
-    background: #f0f0f0;
+    background: #00ff00;  /* Default background */
 }
 
 /* Look for the button when a parking spot is available */
-QPushButton.parkingIndicator[status=&quot;available&quot;] {
+QPushButton[status=&quot;available&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #8fff9b, stop: 1 #008040
-        );
+    );
 }
 
 /* Look for the button when a parking spot is occupied */
-QPushButton.parkingIndicator[status=&quot;occupied&quot;] {
+QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
-        );
+    );
 }
 
-QPushButton.parkingIndicator:hover {
+QPushButton:hover {
     border-color: #666;
 }
 
-QPushButton.parkingIndicator:pressed {
+QPushButton:pressed {
     border-style: inset;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>SPOT 3</string>
@@ -504,37 +494,32 @@ QPushButton.parkingIndicator:pressed {
     font-size: 14px;
     min-width: 40px;
     min-height: 40px;
-}
-
-/* Default look for the button */
-QPushButton.parkingIndicator {
-    background: #f0f0f0;
+    background: #00ff00;  /* Default background */
 }
 
 /* Look for the button when a parking spot is available */
-QPushButton.parkingIndicator[status=&quot;available&quot;] {
+QPushButton[status=&quot;available&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #8fff9b, stop: 1 #008040
-        );
+    );
 }
 
 /* Look for the button when a parking spot is occupied */
-QPushButton.parkingIndicator[status=&quot;occupied&quot;] {
+QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
-        );
+    );
 }
 
-QPushButton.parkingIndicator:hover {
+QPushButton:hover {
     border-color: #666;
 }
 
-QPushButton.parkingIndicator:pressed {
+QPushButton:pressed {
     border-style: inset;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>SPOT 2</string>
@@ -582,7 +567,7 @@ QPushButton.parkingIndicator:pressed {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    color: #333;
+    color: #000;
     border: 2px solid #555;
     border-radius: 15px;
     border-style: outset;
@@ -591,37 +576,32 @@ QPushButton.parkingIndicator:pressed {
     font-size: 14px;
     min-width: 40px;
     min-height: 40px;
-}
-
-/* Default look for the button */
-QPushButton.parkingIndicator {
-    background: #f0f0f0;
+    background: #00ff00;  /* Default background */
 }
 
 /* Look for the button when a parking spot is available */
-QPushButton.parkingIndicator[status=&quot;available&quot;] {
+QPushButton[status=&quot;available&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #8fff9b, stop: 1 #008040
-        );
+    );
 }
 
 /* Look for the button when a parking spot is occupied */
-QPushButton.parkingIndicator[status=&quot;occupied&quot;] {
+QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
-        );
+    );
 }
 
-QPushButton.parkingIndicator:hover {
+QPushButton:hover {
     border-color: #666;
 }
 
-QPushButton.parkingIndicator:pressed {
+QPushButton:pressed {
     border-style: inset;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>SPOT 5</string>
@@ -658,7 +638,7 @@ QPushButton.parkingIndicator:pressed {
         <property name="title">
          <string>ParkingIndicator1</string>
         </property>
-        <widget class="QPushButton" name="parkingIndicator">
+        <widget class="QPushButton" name="parkingIndicator1">
          <property name="geometry">
           <rect>
            <x>4</x>
@@ -678,37 +658,32 @@ QPushButton.parkingIndicator:pressed {
     font-size: 14px;
     min-width: 40px;
     min-height: 40px;
-}
-
-/* Default look for the button */
-QPushButton.parkingIndicator {
-    background: #f0f0f0;
+    background: #00ff00;  /* Default background */
 }
 
 /* Look for the button when a parking spot is available */
-QPushButton.parkingIndicator[status=&quot;available&quot;] {
+QPushButton[status=&quot;available&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #8fff9b, stop: 1 #008040
-        );
+    );
 }
 
 /* Look for the button when a parking spot is occupied */
-QPushButton.parkingIndicator[status=&quot;occupied&quot;] {
+QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
         radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
-        );
+    );
 }
 
-QPushButton.parkingIndicator:hover {
+QPushButton:hover {
     border-color: #666;
 }
 
-QPushButton.parkingIndicator:pressed {
+QPushButton:pressed {
     border-style: inset;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>SPOT 1</string>

@@ -205,16 +205,10 @@ class EdgeNode:
             self.lights.stopFlash()
             self.commmand_lock.release() # Release the lock
             GPIO.cleanup()
-            sys.exit(0)
-        finally:
             self.server_thread.join()
             self.client_thread.join()
             self.mqtt_client.stop()
             logging.info("Exiting App...")
-            GPIO.cleanup()
-
-            sys.exit(0)
-
     
     def getInput(self) -> int:
         # Get the input from the user
