@@ -153,7 +153,15 @@ class EdgeNode:
         while self.running:
             if self.parkingSpot.isFull():
                 logging.warning("Parking lot is full")
-            spot = self.getInput()
+            try:
+                spot = self.getInput()
+            except ValueError:
+                logging.error("Invalid input")
+                continue
+            except KeyboardInterrupt:
+                logging.info("Exiting App: User pressed q...")
+                sys.exit(0)
+            
             if spot >= 0 and spot <= 4:
                 self.parkingSpot.update(spot)
                 logging.info(f"Parking in spot {spot}")

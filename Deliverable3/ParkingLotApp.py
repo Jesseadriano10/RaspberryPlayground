@@ -29,6 +29,8 @@ class ParkingLotApp(QtWidgets.QMainWindow):
     def __init__(self):
         super(ParkingLotApp, self).__init__()
         uic.loadUi('parking_lot.ui', self)
+        self.setMinimumSize(800, 600)
+        self.resize(1920, 1080)
         
         # Find the widgets using their object names set in Qt Designer
         self.sensorDisplay = self.findChild(QtWidgets.QLabel, 'sensorDisplay')
@@ -125,5 +127,6 @@ class ParkingLotApp(QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = ParkingLotApp()
+    window.setWindowTitle("Parking Lot App")
     window.show()
     sys.exit(app.exec_())
