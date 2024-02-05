@@ -156,15 +156,15 @@ class EdgeNode:
                 logging.warning("Parking lot is full")
             try:
                 spot = self.getInput()
-                if spot >= 0 and spot <= 4:
+                if int and spot >= 0 and spot <= 4:
                     self.parkingSpot.update(spot)
                     logging.info(f"Parking in spot {spot}")
                     self.readSensorAndPublish()
                     logging.info(f"Sensor value: {self.dataSensor.read()}")
-                elif spot == 'c':
+                elif spot == '5':
                     spot = int(input("Enter the spot to clear: "))
                     self.parkingSpot.clear(spot)
-                elif spot == 'q':
+                elif spot == '6':
                     logging.info("Exiting App: User pressed q...")
                     sys.exit(0)
             except ValueError:
@@ -172,18 +172,6 @@ class EdgeNode:
                 continue
             except KeyboardInterrupt:
                 logging.info("Exiting App: User pressed Ctrl+C...")
-                sys.exit(0)
-            
-            if spot >= 0 and spot <= 4:
-                self.parkingSpot.update(spot)
-                logging.info(f"Parking in spot {spot}")
-                self.readSensorAndPublish()
-                logging.info(f"Sensor value: {self.dataSensor.read()}")
-            elif spot == 'c':
-                spot = int(input("Enter the spot to clear: "))
-                self.parkingSpot.clear(spot)
-            elif spot == 'q':
-                logging.info("Exiting App: User pressed q...")
                 sys.exit(0)
             time.sleep(1)
     """
@@ -239,8 +227,8 @@ class EdgeNode:
         print("2: Spot 3\n")
         print("3: Spot 4\n")
         print("4: Spot 5\n")
-        print("c: Clear a spot\n")
-        print("q: Exit\n")
+        print("5: Clear a spot\n")
+        print("6: Exit\n")
         spot = int(input())
         return spot
     

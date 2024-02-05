@@ -1,4 +1,5 @@
-from PyQt5 import QtCore,QtWidgets, uic, pyqtSignal;
+from PyQt5 import QtCore,QtWidgets, uic;
+from PyQt5.QtCore import pyqtSignal;
 import sys;
 import paho.mqtt.client as mqtt;
 import json;
