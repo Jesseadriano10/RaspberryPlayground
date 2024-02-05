@@ -31,8 +31,8 @@ class WarningLight:
     Warning light is connected to 3 pins for each color (red, yellow, green)
     
     """
-    def __init__(self, pins: Tuple) -> None:
-        self.pins: Tuple = pins
+    def __init__(self, pins: Tuple[int]) -> None:
+        self.pins: Tuple[int] = pins
         for pin in self.pins:
             GPIO.setup(pin, GPIO.OUT)
         
@@ -53,11 +53,20 @@ class WarningLight:
             GPIO.output(pin, GPIO.HIGH)
     
     # Flash the warning light
-    def flash(self,pin: int) -> None:
-        GPIO.output(pin, GPIO.LOW)
-        time.sleep(0.5)
-        GPIO.output(pin, GPIO.HIGH)
-        time.sleep(0.5)
+    def startFlash(self,pin: int) -> None:
+        self.shouldFlash = True
+        self.flash_thread = threading.Thread(target=self.flash, args=(pin,))
+        self.flash_thread.start()
+    def flash(self, pin: int) -> None:
+        while self.shouldFlash:
+            self.on(pin)
+            time.sleep(0.5)
+            self.off(pin)
+            time.sleep(0.5)
+    def stopFlash(self) -> None:
+        self.shouldFlash = False
+        self.off(None)
+        self.flash_thread.join()
 
 class MQTTClient:
     def __init__(self, broker_name: str, command_callback=None) -> None:
@@ -171,7 +180,6 @@ class EdgeNode:
                 elif spot == '6':
                     logging.info("Exiting App: User pressed q...")
                     sys.exit(0)
-                self.server_thread.join()          
             except ValueError:
                 logging.error("Invalid input")
                 continue
@@ -188,11 +196,10 @@ class EdgeNode:
         while self.running:
             with self.command_lock:
                 if self.command == "WARN ON":
-                    self.lights.flash(self.RGB_RED)
+                    self.lights.startFlash(self.RGB_RED)
                 elif self.command == "WARN OFF":
-                    self.lights.off(self.RGB_RED)
+                    self.lights.stopFlash()
                 self.command = None
-            self.client_thread.join()
             time.sleep(1)
 
         
@@ -209,12 +216,13 @@ class EdgeNode:
         except KeyboardInterrupt:
             logging.info("Keyboard interrupt detected. Exiting App...")
             self.running = False # Stop the threads
+            self.lights.stopFlash()
             self.commmand_lock.release() # Release the lock
             GPIO.cleanup()
             sys.exit(0)
         finally:
-            server_thread.join()
-            client_thread.join()
+            self.server_thread.join()
+            self.client_thread.join()
             self.mqtt_client.stop()
             logging.info("Exiting App...")
             GPIO.cleanup()
