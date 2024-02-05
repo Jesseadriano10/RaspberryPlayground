@@ -236,6 +236,8 @@ class EdgeNode:
         else:
             assert spot >= 0 and spot <= 4
             self.parkingSpot.update(spot)
+            logging.info("Uploading data and parking spot status to the cloud")
+            self.readSensorAndPublish()
         return spot
     
         
