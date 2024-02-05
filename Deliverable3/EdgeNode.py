@@ -156,6 +156,17 @@ class EdgeNode:
                 logging.warning("Parking lot is full")
             try:
                 spot = self.getInput()
+                if spot >= 0 and spot <= 4:
+                    self.parkingSpot.update(spot)
+                    logging.info(f"Parking in spot {spot}")
+                    self.readSensorAndPublish()
+                    logging.info(f"Sensor value: {self.dataSensor.read()}")
+                elif spot == 'c':
+                    spot = int(input("Enter the spot to clear: "))
+                    self.parkingSpot.clear(spot)
+                elif spot == 'q':
+                    logging.info("Exiting App: User pressed q...")
+                    sys.exit(0)
             except ValueError:
                 logging.error("Invalid input")
                 continue
