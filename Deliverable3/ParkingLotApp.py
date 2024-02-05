@@ -28,8 +28,8 @@ class DisplayBoardContainer:
 
 # Importing the required classes
 class ParkingLotApp(QtWidgets.QMainWindow):
-    displayMessageReceived = pyqtSignal(str) # Signal for when a message is received
-    systemMessageReceived = pyqtSignal(str) # Signal for when a system message is received
+    displayMessageReceived = pyqtSignal(dict) # Signal for when a message is received
+    systemMessageReceived = pyqtSignal(dict) # Signal for when a system message is received
     def __init__(self):
         super(ParkingLotApp, self).__init__()
         uic.loadUi('parking_lot.ui', self)
@@ -104,10 +104,14 @@ class ParkingLotApp(QtWidgets.QMainWindow):
             self.systemMessageReceived.emit(payload)
 
     def updateSystemMessage(self, payload):
-        self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
-        self.parkingLot = payload['parkingLotData']
-        self.updateParkingIndicators(self.parkingLot)
-        self.updateOccupiedSlots(payload['occupiedSlots'], payload['isFull'])
+        print(f"System message received: {payload}")
+        if 'command' not in payload:
+            self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
+            self.parkingLot = payload['parkingLotData']
+            self.updateParkingIndicators(self.parkingLot)
+            self.updateOccupiedSlots(payload['occupiedSlots'], payload['isFull'])
+            self.updateDisplayBoard({"message": "System message received", "parkingLotData": self.parkingLot, "occupiedSlots": self.occupiedSlots, "isFull": self.isFull, "timestamp": QtCore.QDateTime.currentDateTime().toString()})
+
     def updateParkingIndicators(self, parkingLotData):
         # Update parking spot indicators based on ParkingLotData
         for i, occupied in enumerate(parkingLotData):

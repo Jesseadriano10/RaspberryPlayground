@@ -225,6 +225,8 @@ class EdgeNode:
             print("Enter the parking spot number to clear: \n")
             spot = int(input())
             self.parkingSpot.clear(spot)
+            logging.info("Uploading data and parking spot status to the cloud")
+            self.readSensorAndPublish()
         elif spot == 6:
             raise KeyboardInterrupt
         else:

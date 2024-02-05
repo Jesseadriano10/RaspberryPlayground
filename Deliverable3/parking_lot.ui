@@ -345,7 +345,7 @@ QPushButton[status=&quot;available&quot;] {
 QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
-        radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
+        radius: 1.35, stop: 0 #ff0000, stop: 1 #8b0000  /* Adjusted for a deeper red gradient */
     );
 }
 
@@ -355,7 +355,8 @@ QPushButton:hover {
 
 QPushButton:pressed {
     border-style: inset;
-}</string>
+}
+</string>
          </property>
          <property name="text">
           <string>SPOT 4</string>
@@ -509,7 +510,7 @@ QPushButton[status=&quot;available&quot;] {
 QPushButton[status=&quot;occupied&quot;] {
     background: qradialgradient(
         cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5,
-        radius: 1.35, stop: 0 #ff8f8f, stop: 1 #880000
+        radius: 1.35, stop: 0 #ff0000, stop: 1 #8b0000  /* Adjusted for a deeper red gradient */
     );
 }
 
@@ -519,7 +520,8 @@ QPushButton:hover {
 
 QPushButton:pressed {
     border-style: inset;
-}</string>
+}
+</string>
          </property>
          <property name="text">
           <string>SPOT 2</string>
