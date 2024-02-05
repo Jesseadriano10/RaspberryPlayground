@@ -72,7 +72,7 @@ QPushButton:pressed {
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="warninLightOffButton">
+       <widget class="QPushButton" name="warningLightOffButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>

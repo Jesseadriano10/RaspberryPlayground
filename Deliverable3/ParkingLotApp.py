@@ -65,15 +65,13 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         print(f"Connected with result code {rc}")
         self.client.subscribe("parking/system/")
         self.client.subscribe("parking/displayBoard/")
-            
+                
     def updateDisplayBoard(self):
         messages = self.displayBoardContainer.getMessages()
         timestamps = self.displayBoardContainer.getTimestamps()
         self.displayBoard.clear()
         for message, timestamp in zip(messages, timestamps):
-            self.displayBoard.append(f"{message} - {timestamp}, 
-                                     \n\tSpots filled: {self.occupiedSlots}, isFull? {self.isFull},
-                                     \n\t Lot = {self.parkingLot}")
+            self.displayBoard.append(f"{message} - {timestamp}, \n\tSpots filled: {self.occupiedSlots}, isFull? {self.isFull}, \n\t Lot = {self.parkingLot}")
             
     def on_message(self, client, userdata, msg):
         # Parse the json payload and do something with it

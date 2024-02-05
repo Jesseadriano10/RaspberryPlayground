@@ -61,12 +61,13 @@ class WarningLight:
         time.sleep(0.5)
 
 class MQTTClient:
-    def __init__(self, broker_name: str) -> None:
+    def __init__(self, broker_name: str, command_callback=None) -> None:
         self.broker_name: str = broker_name
         self.client = mqtt.Client("jaa369_d3")
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
         self.client.connect(self.broker_name, keepalive=60)
+        self.command_callback = command_callback
 
     
     def on_connect(self, client: mqtt.Client, userdata: object, flags: dict, rc: int) -> None:
@@ -85,8 +86,8 @@ class MQTTClient:
         elif msg.topic == "parking/system/":
             # Decode contents of the message and send to the console
             # and update command var
-            global command
-            command = payload["command"]
+            if 'command' in payload and self.command_callback:
+                self.command_callback(payload['command'])
 
             
             
@@ -135,15 +136,18 @@ class EdgeNode:
     def __init__(self, light_pins: Tuple[int], adcAddr: int, broker: str ) -> None:
         self.dataSensor = ADCSensor(adcAddr)
         self.lights = WarningLight(light_pins)
-        self.mqtt_client = MQTTClient(broker)
+        self.command_lock = threading.Lock()
+        self.running = True # Control execution of threads
+        self.mqtt_client = MQTTClient(broker, command_callback=self.handle_new_command)
         self.parkingSpot = ParkingSpot()
         self.RGB_RED: int = light_pins[0]
         self.RGB_GREEN: int = light_pins[1]
         self.RGB_BLUE: int = light_pins[2]
-        global command
-        command: str = ""
-        self.running = True # Control execution of threads
+        self.command = None
 
+    def handle_new_command(self, new_command: str) -> None:
+        with self.command_lock:
+            self.command = new_command
 
     def serverSide(self) -> None:
         while self.running:
@@ -168,15 +172,14 @@ class EdgeNode:
     QT side of the application to the console
     """
     def clientSide(self) -> None:
-        global command
         while self.running:
-            if command == "WARN ON":
-                self.lights.flash(self.RGB_RED)
-            elif command == "WARN OFF":
-                self.lights.off(self.RGB_RED)
-            else:
-                command = ""
-        time.sleep(1)
+            with self.command_lock:
+                if self.command == "WARN ON":
+                    self.lights.flash(self.RGB_RED)
+                elif self.command == "WARN OFF":
+                    self.lights.off(self.RGB_RED)
+                self.command = None
+            time.sleep(1)
 
         
     def run(self) -> None:
