@@ -48,6 +48,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         self.warningLightOffButton.clicked.connect(self.turnWarningLightOff)
 
         self.displayMessageReceived.connect(self.updateDisplayBoard)
+        self.systemMessageReceived.connect(self.updateSystemMessage)
 
         # data variables
         self.occupiedSlots = 0
@@ -96,9 +97,11 @@ class ParkingLotApp(QtWidgets.QMainWindow):
             "isFull": self.parkingSpot.isFull()
             }   
             """
-            self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
-            self.updateParkingIndicators(payload["parkingLotData"])
-            self.updateOccupiedSlots(payload["occupiedSlots"], payload["isFull"])
+            self.systemMessageReceived.emit(payload)
+    def updateSystemMessage(self, payload):
+        self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
+        self.updateParkingIndicators(payload["parkingLotData"])
+        self.updateOccupiedSlots(payload["occupiedSlots"], payload["isFull"])
     def updateParkingIndicators(self, parkingLotData):
         # Update parking spot indicators based on ParkingLotData
         for i, occupied in enumerate(parkingLotData):
@@ -113,11 +116,11 @@ class ParkingLotApp(QtWidgets.QMainWindow):
     
     def turnWarningLightOn(self):
         # Send MQTT message to turn on the warning light: WARN ON
-        self.client.publish("parking/system/", json.dumps({"command": "WARN ON"}))
+        self.client.publish("jaa369/parking/system/", json.dumps({"command": "WARN ON"}))
     
     def turnWarningLightOff(self):
         # Send MQTT message to turn off the warning light: WARN OFF
-        self.client.publish("parking/system/", json.dumps({"command": "WARN OFF"}))
+        self.client.publish("jaa369/parking/system/", json.dumps({"command": "WARN OFF"}))
     
         
             
