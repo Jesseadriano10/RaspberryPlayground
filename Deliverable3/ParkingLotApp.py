@@ -55,7 +55,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
 
     def setupMQTT(self):
         self.broker = "test.mosquitto.org"
-        self.client = mqtt.Client("jaa369_d3")
+        self.client = mqtt.Client("jaa369_d3_qtApp")
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
         self.client.connect(self.broker, keepalive=60)
@@ -63,8 +63,8 @@ class ParkingLotApp(QtWidgets.QMainWindow):
     
     def on_connect(self, client, userdata, flags, rc):
         print(f"Connected with result code {rc}")
-        self.client.subscribe("parking/system/")
-        self.client.subscribe("parking/displayBoard/")
+        self.client.subscribe("jaa369/parking/system/")
+        self.client.subscribe("jaa369/parking/displayBoard/")
                 
     def updateDisplayBoard(self):
         messages = self.displayBoardContainer.getMessages()
@@ -76,10 +76,10 @@ class ParkingLotApp(QtWidgets.QMainWindow):
     def on_message(self, client, userdata, msg):
         # Parse the json payload and do something with it
         payload = json.loads(msg.payload)
-        if msg.topic == "parking/displayBoard/":
+        if msg.topic == "jaa369/parking/displayBoard/":
             self.displayBoardContainer.addMessage(payload["message"])
             self.updateDisplayBoard()
-        elif msg.topic == "parking/system/": 
+        elif msg.topic == "jaa369/parking/system/": 
             """
             Get the payload containing
             payload = {
@@ -117,7 +117,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         
     def sendMessage(self):
         message = self.messageInput.text()
-        self.client.publish("parking/displayBoard/", json.dumps({"message": message}))
+        self.client.publish("parking/displayBoard/", json.dumps({"message": message, "timestamp": QtCore.QDateTime.currentDateTime().toString()}))
         self.messageInput.clear()
             
         

@@ -63,7 +63,7 @@ class WarningLight:
 class MQTTClient:
     def __init__(self, broker_name: str, command_callback=None) -> None:
         self.broker_name: str = broker_name
-        self.client = mqtt.Client("jaa369_d3")
+        self.client = mqtt.Client("jaa369_d3_RPi")
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
         self.client.connect(self.broker_name, keepalive=60)
@@ -71,10 +71,10 @@ class MQTTClient:
 
     
     def on_connect(self, client: mqtt.Client, userdata: object, flags: dict, rc: int) -> None:
-        logging.info(f"Connected with result code {rc}")
+        # logging.info(f"Connected with result code {rc}") # This line clutters the console
         
-        self.client.subscribe("parking/displayBoard/")
-        self.client.subscribe("parking/system/")
+        self.client.subscribe("jaa369/parking/displayBoard/")
+        self.client.subscribe("jaa369/parking/system/")
     
     def on_message(self, client: mqtt.Client, userdata: object, msg: mqtt.MQTTMessage) -> None:
         # Handle incoming MQTT messages and act on them if needed
@@ -198,6 +198,7 @@ class EdgeNode:
         except KeyboardInterrupt:
             logging.info("Keyboard interrupt detected. Exiting App...")
             self.running = False # Stop the threads
+            self.commmand_lock.release() # Release the lock
             GPIO.cleanup()
             sys.exit(0)
         finally:
