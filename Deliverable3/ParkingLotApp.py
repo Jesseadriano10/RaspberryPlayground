@@ -3,6 +3,7 @@ from PyQt5.QtCore import pyqtSignal;
 import sys;
 import paho.mqtt.client as mqtt;
 import json;
+import logging;
 
 """
 DisplayBoardContainer class
@@ -101,8 +102,12 @@ class ParkingLotApp(QtWidgets.QMainWindow):
             }   
             """
             self.systemMessageReceived.emit(payload)
+
     def updateSystemMessage(self, payload):
         self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
+        self.parkingLot = payload['parkingLotData']
+        self.updateParkingIndicators(self.parkingLot)
+        self.updateOccupiedSlots(payload['occupiedSlots'], payload['isFull'])
     def updateParkingIndicators(self, parkingLotData):
         # Update parking spot indicators based on ParkingLotData
         for i, occupied in enumerate(parkingLotData):
