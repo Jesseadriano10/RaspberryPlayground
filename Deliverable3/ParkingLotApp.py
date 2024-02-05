@@ -128,7 +128,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         
     def sendMessage(self):
         message = self.messageInput.text()
-        self.client.publish("jaa369/parking/displayBoard/", json.dumps({"message": message, "timestamp": QtCore.QDateTime.currentDateTime().toString()}))
+        self.client.publish("jaa369/parking/displayBoard/", json.dumps({"message": message, "parkingLotData": self.parkingLot, "occupiedSlots": self.occupiedSlots, "isFull": self.isFull, "timestamp": QtCore.QDateTime.currentDateTime().toString()}))
         self.messageInput.clear()
             
         

@@ -247,7 +247,8 @@ class EdgeNode:
             "message": "From RPi: Parking lot status",
             "parkingLotData": self.parkingSpot.spots,
             "occupiedSlots": self.parkingSpot.occupied,
-            "isFull": self.parkingSpot.isFull()
+            "isFull": self.parkingSpot.isFull(),
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + " CST"
         }
         self.mqtt_client.publish("jaa369/parking/system/", json.dumps(sensor_payload))
         self.mqtt_client.publish("jaa369/parking/displayBoard/", json.dumps(parking_payload))
