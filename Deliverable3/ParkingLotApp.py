@@ -74,9 +74,11 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         self.client.subscribe("jaa369/parking/system/")
         self.client.subscribe("jaa369/parking/displayBoard/")
                 
-    def updateDisplayBoard(self, message):
-        self.displayBoardContainer.addMessage(message)
+    def updateDisplayBoard(self, payload):
+        self.updateParkingIndicators(payload['parkingLotData'])
+        self.updateOccupiedSlots(payload['occupiedSlots'], payload['isFull'])
         # Clear the display board and update it with the new messages
+        self.displayBoardContainer.addMessage(payload['message'])
         messages = self.displayBoardContainer.getMessages()
         timestamps = self.displayBoardContainer.getTimestamps()
         self.displayBoard.clear()
@@ -87,7 +89,7 @@ class ParkingLotApp(QtWidgets.QMainWindow):
         # Parse the json payload and do something with it
         payload = json.loads(msg.payload)
         if msg.topic == "jaa369/parking/displayBoard/":
-            self.displayMessageReceived.emit(payload["message"])
+            self.displayMessageReceived.emit(payload)
         elif msg.topic == "jaa369/parking/system/": 
             """
             Get the payload containing
@@ -101,8 +103,6 @@ class ParkingLotApp(QtWidgets.QMainWindow):
             self.systemMessageReceived.emit(payload)
     def updateSystemMessage(self, payload):
         self.sensorDisplay.setText(f"Sensor Value: {payload['sensorValue']}")
-        self.updateParkingIndicators(payload["parkingLotData"])
-        self.updateOccupiedSlots(payload["occupiedSlots"], payload["isFull"])
     def updateParkingIndicators(self, parkingLotData):
         # Update parking spot indicators based on ParkingLotData
         for i, occupied in enumerate(parkingLotData):

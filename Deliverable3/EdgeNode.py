@@ -242,13 +242,16 @@ class EdgeNode:
     
         
     def readSensorAndPublish(self) -> None:
-        payload = {
-            "sensorValue": self.dataSensor.read(),
+        sensor_payload = {"sensorValue": self.dataSensor.read()}
+        parking_payload = {
+            "message": "From RPi: Parking lot status",
             "parkingLotData": self.parkingSpot.spots,
             "occupiedSlots": self.parkingSpot.occupied,
             "isFull": self.parkingSpot.isFull()
         }
-        self.mqtt_client.publish("jaa369/parking/system/", json.dumps(payload))
+        self.mqtt_client.publish("jaa369/parking/system/", json.dumps(sensor_payload))
+        self.mqtt_client.publish("jaa369/parking/displayBoard/", json.dumps(parking_payload))
+
         
 
 if __name__ == "__main__":
