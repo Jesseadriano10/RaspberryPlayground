@@ -92,11 +92,12 @@ class MQTTClient:
             
             
     
-    def format_displayBoard(self, payload: dict) -> str:
+    def format_displayBoard(self, payload: json) -> str:
         # Format the displayBoard message
         headers = ["Message", "Timestamp"]
         data = [payload["message"], payload["timestamp"]]
-        return tabulate(data, headers, tablefmt="grid", stralign="center")
+
+        return tabulate(data, headers, tablefmt="pretty", stralign="center")
     
     
     def start(self) -> None:
