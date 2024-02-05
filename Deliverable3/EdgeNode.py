@@ -160,7 +160,7 @@ class EdgeNode:
                 logging.error("Invalid input")
                 continue
             except KeyboardInterrupt:
-                logging.info("Exiting App: User pressed q...")
+                logging.info("Exiting App: User pressed Ctrl+C...")
                 sys.exit(0)
             
             if spot >= 0 and spot <= 4:
