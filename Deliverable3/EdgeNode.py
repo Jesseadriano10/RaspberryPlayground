@@ -81,9 +81,9 @@ class MQTTClient:
         # On message received, handle displayBoard content to console
         logging.info(f"Received `{msg.payload}` from topic `{msg.topic}`")
         payload = json.loads(msg.payload)
-        if msg.topic == "parking/displayBoard/":
+        if msg.topic == "jaa369/parking/displayBoard/":
             print(self.format_displayBoard(payload))
-        elif msg.topic == "parking/system/":
+        elif msg.topic == "jaa369/parking/system/":
             # Decode contents of the message and send to the console
             # and update command var
             if 'command' in payload and self.command_callback:
@@ -240,7 +240,7 @@ class EdgeNode:
             "occupiedSlots": self.parkingSpot.occupied,
             "isFull": self.parkingSpot.isFull()
         }
-        self.mqtt_client.publish("parking/system/", json.dumps(payload))
+        self.mqtt_client.publish("jaa369/parking/system/", json.dumps(payload))
         
 
 if __name__ == "__main__":
