@@ -28,6 +28,30 @@ class DisplayBoardContainer:
 
 # Importing the required classes
 class ParkingLotApp(QtWidgets.QMainWindow):
+    """
+    ParkingLotApp is a Qt application for managing a parking lot system.
+
+    Attributes:
+        displayMessageReceived (pyqtSignal): Signal for when a message is received.
+        systemMessageReceived (pyqtSignal): Signal for when a system message is received.
+        occupiedSlots (int): Number of occupied parking slots.
+        parkingLot (list): List representing the parking lot status.
+        sensorValue (int): Current sensor value.
+        isFull (bool): Flag indicating if the parking lot is full.
+
+    Methods:
+        __init__(): Initializes the ParkingLotApp.
+        setupMQTT(): Sets up the MQTT connection.
+        on_connect(): Callback function for MQTT connection.
+        updateDisplayBoard(payload): Updates the display board with new messages.
+        on_message(): Callback function for MQTT message reception.
+        updateSystemMessage(payload): Updates the system message.
+        updateParkingIndicators(parkingLotData): Updates the parking spot indicators.
+        updateOccupiedSlots(occupiedSlots, isFull): Updates the occupied slots and isFull flag.
+        turnWarningLightOn(): Turns on the warning light.
+        turnWarningLightOff(): Turns off the warning light.
+        sendMessage(): Sends a message to the display board.
+    """
     displayMessageReceived = pyqtSignal(dict) # Signal for when a message is received
     systemMessageReceived = pyqtSignal(dict) # Signal for when a system message is received
     def __init__(self):
