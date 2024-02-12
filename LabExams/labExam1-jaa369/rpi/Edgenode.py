@@ -15,54 +15,27 @@ import logging
 import base64
 import cv2
 
-class ADCSensor:
-    def __init__(self, addr: int) -> None:
-        self.addr: int = addr
-        ADC.setup(self.addr)
-    
-    def read(self) -> int:
-        return ADC.read(0)
-
-class LED:
-    def __init__(self, pins: Tuple[int]) -> None:
-        self.pins: Tuple[int] = pins
-        for pin in self.pins:
-            GPIO.setup(pin, GPIO.OUT)
-        
-    # Turn a light on. No color specified will turn all lights on
-    def on(self, pin: int) -> None:
-        if pin == None:
-            for pin in self.pins:
-                GPIO.output(pin, GPIO.LOW)
-        else:
-            GPIO.output(pin, GPIO.LOW)
-        
-    # Turn the warning light off
-    def off(self, pin: int) -> None:
-        if pin == None:
-            for pin in self.pins:
-                GPIO.output(pin, GPIO.HIGH)
-        else:
-            GPIO.output(pin, GPIO.HIGH)
-
 class MQTTClient:
     def __init__(self, broker: str) -> None:
         self.broker: str = broker
         self.client: mqtt.Client = mqtt.Client("jaa369RPi-exam1")
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
+        
         self.client.connect(self.broker, keepalive=60)
         self.client.loop_start()
     
     def on_connect(self, client: mqtt.Client, userdata: object, flags: dict, rc: int) -> None:
         logging.info("Connected with result code "+str(rc))
-        client.subscribe("jaa369/{insert_topic_here}")
+        client.subscribe("jaa369/exam1/channel")
+        client.subscribe("jaa369/exam1/ack")
         # TODO: Add additional topics to subscribe to here
 
     def on_message(self, client: mqtt.Client, userdata: object, msg: mqtt.MQTTMessage) -> None:
-        logging.info(f"Received `{msg.payload}` from `{msg.topic}` topic")
-        payload = json.loads(msg.payload)
-        # TODO: Apply msg to the appropriate function
+        # Only receive on ack topic
+        if msg.topic == "jaa369/exam1/ack":
+            print(f"Received `{msg.payload}` from `{msg.topic}` topic")
+        
 
     def start(self) -> None:
         self.client.loop_start()
@@ -78,13 +51,11 @@ class MQTTClient:
     
 
 class Edgenode:
-    def __init__(self, light_pins: Tuple[int], adcAddr: int, broker: str) -> None:
-        self.sensor: ADCSensor = ADCSensor(adcAddr)
-        self.light: LED = LED(light_pins)
+    def __init__(self, broker: str) -> None:
         
         self.mqtt: MQTTClient = MQTTClient(broker)
         # TODO: MAYBE ADD LIGHT VARIABLES FOR READIBILITY
-        self.fileImage = "image.jpg"
+        self.fileImage = ""
 
         
 
@@ -93,7 +64,24 @@ class Edgenode:
         while True:
             # TODO: Add the logic to do something...
             try:
-                pass
+                # Send a message with command and message
+                # 0: default display
+                # 1: Happy Birthday
+                # 2: Saskatoon Shines
+
+                command = int(input("Enter a command: "))
+                if command == 0:
+                    self.mqtt.publish("jaa369/exam1/channel", json.dumps({"command": 0}))
+                elif command == 1:
+                    self.fileImage = "image1.png"
+                    self.scale_image(self.fileImage, 100)
+                    self.mqtt.publish("jaa369/exam1/channel", json.dumps({"command": 1}))
+                elif command == 2:
+                    self.fileImage = "image2.png"
+                    self.scale_image(self.fileImage, 50)
+                    self.mqtt.publish("jaa369/exam1/channel", json.dumps({"command": 2}))
+                else:
+                    print("Invalid command")
             except KeyboardInterrupt:
                 self.mqtt.stop()
                 GPIO.cleanup()
@@ -114,15 +102,14 @@ class Edgenode:
 
 
 if __name__ == "__main__":
-    light_pins = (17, 18) # Add more pins if needed
-    adcAddr = 0x48
+
     try:
         broker = sys.argv[1]
     except IndexError:
-        broker = "broker.hivemq.com"
+        broker = "test.mosquitto.org"
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
-    node = Edgenode(light_pins, adcAddr, broker)
+    node = Edgenode(broker)
     node.run()
     GPIO.cleanup()
     sys.exit(0)
